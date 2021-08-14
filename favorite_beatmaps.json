@@ -1,0 +1,83 @@
+{
+	"$schema": "./favorite_beatmaps.schema.json",
+	"title": "Favorite Beatmaps",
+	"osuUserId": 18508852,
+	"osuUserName": "niklas616",
+	"favoriteBeatmaps": [
+		{
+			"comment": "Nandemo Nai ya, RADWIMPS, 4.41, ranked",
+			"osuBeatmapId": 1095534,
+			"customTags": [
+				"first-100pp"
+			]
+		},
+		{
+			"comment": "Blood Sugar, Pendulum, 3.84, loved",
+			"osuBeatmapId": 112385,
+			"customTags": [
+				"banger"
+			]
+		},
+		{
+			"comment": "Emo Hardcore, LIDA x FRIK PATI, 4.49, ranked",
+			"osuBeatmapId": 3086537,
+			"customTags": [
+				"banger"
+			]
+		},
+		{
+			"comment": "Cold Green Eyes ft. Roos Denayer, Station Earth, 5.17, ranked",
+			"osuBeatmapId": 814293,
+			"customTags": [
+				"first-5star"
+			]
+		},
+		{
+			"comment": "I'll See You Again (feat. Chi Chi), S3RL, 3.50, ranked",
+			"osuBeatmapId": 1649184,
+			"customTags": [
+				"banger"
+			]
+		},
+		{
+			"comment": "I'll See You Again (feat. Chi Chi), S3RL, 4.46, ranked",
+			"osuBeatmapId": 1649183,
+			"customTags": [
+				"banger"
+			]
+		},
+		{
+			"comment": "Battle Sirens (RIOT Remix), Knife Party & Tom Morello, 4.66, ranked",
+			"osuBeatmapId": 1558497,
+			"customTags": [
+				"banger"
+			]
+		},
+		{
+			"comment": "Shiroki Yami no Arabesque (Soleily Remix), Marie, 3.64, graveyard",
+			"osuBeatmapId": 1839949,
+			"customTags": [
+				"banger"
+			]
+		},
+		{
+			"comment": "The Silent Ones, Varien, 3.30, ranked",
+			"osuBeatmapId": 1025675,
+			"customTags": []
+		},
+		{
+			"comment": "LIBIDO, onumi, 3.31, ranked",
+			"osuBeatmapId": 2876949,
+			"customTags": [
+				"banger"
+			]
+		},
+		{
+			"comment": "LIBIDO, onumi, 2.36, ranked",
+			"osuBeatmapId": 2879095,
+			"customTags": [
+				"banger"
+			]
+		}
+	]
+}

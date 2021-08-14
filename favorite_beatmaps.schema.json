@@ -1,0 +1,66 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string"
+      },
+      "osuUserId": {
+        "type": "integer"
+      },
+      "osuUserName": {
+        "type": "string"
+      },
+      "favoriteBeatmaps": {
+        "type": "array",
+        "items": [
+          {
+            "type": "object",
+            "properties": {
+              "osuBeatmapId": {
+                "type": "integer"
+              },
+              "customTags": {
+                "type": "array",
+                "items": [
+                  {
+                    "type": "string"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "osuBeatmapId",
+              "customTags"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "osuBeatmapId": {
+                "type": "integer"
+              },
+              "customTags": {
+                "type": "array",
+                "items": [
+                  {
+                    "type": "string"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "osuBeatmapId",
+              "customTags"
+            ]
+          }
+        ]
+      }
+    },
+    "required": [
+      "title",
+      "osuUserId",
+      "osuUserName",
+      "favoriteBeatmaps"
+    ]
+  }
