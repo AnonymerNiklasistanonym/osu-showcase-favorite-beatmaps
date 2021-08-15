@@ -25,6 +25,8 @@ export const readFavoriteBeatmaps = async (
     const oauthCredentialsFileContent = await fsp.readFile(filePath, {
         encoding: "utf8",
     })
-    const oAuthCredentialsJson: OsuFavoriteBeatmaps = JSON.parse(oauthCredentialsFileContent)
+    const oAuthCredentialsJson: OsuFavoriteBeatmaps = JSON.parse(
+        oauthCredentialsFileContent,
+    )
     return oAuthCredentialsJson
 }

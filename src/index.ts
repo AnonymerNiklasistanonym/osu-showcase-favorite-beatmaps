@@ -22,9 +22,9 @@ export interface FavoriteBeatmapInformationStats {
 }
 
 export interface FavoriteBeatmapInformationUserRankCounts {
-    50: number
-    100: number
-    300: number
+    x50: number
+    x100: number
+    x300: number
     geki: number
     katu: number
     miss: number
@@ -44,6 +44,7 @@ export interface FavoriteBeatmapInformationUserRank {
 
 export interface FavoriteBeatmapInformation {
     id: number
+    setId: number
     title: string
     artist: string
     creator: string
@@ -68,39 +69,60 @@ const getBeatmapInformation = async (
         oauthAccessToken,
         beatmapId,
     )
-    if (beatmapInfo.beatmapset === undefined || beatmapInfo.beatmapset === null) {
-        throw Error(`Beatmapset of beatmap ${beatmapId} was undefined (${JSON.stringify(beatmapInfo)})`)
+    if (
+        beatmapInfo.beatmapset === undefined ||
+        beatmapInfo.beatmapset === null
+    ) {
+        throw Error(
+            `Beatmapset of beatmap ${beatmapId} was undefined (${JSON.stringify(
+                beatmapInfo,
+            )})`,
+        )
     }
     if ((beatmapInfo.beatmapset as unknown as Beatmapset).tags === undefined) {
-        throw Error(`Beatmapset tags of beatmap ${beatmapId} were undefined (${JSON.stringify(beatmapInfo)})`)
+        throw Error(
+            `Beatmapset tags of beatmap ${beatmapId} were undefined (${JSON.stringify(
+                beatmapInfo,
+            )})`,
+        )
     }
     if (beatmapInfo.max_combo === undefined) {
-        throw Error(`Beatmapset max combo of beatmap ${beatmapId} was undefined (${JSON.stringify(beatmapInfo)})`)
+        throw Error(
+            `Beatmapset max combo of beatmap ${beatmapId} was undefined (${JSON.stringify(
+                beatmapInfo,
+            )})`,
+        )
     }
-    const osuTags = (beatmapInfo.beatmapset as unknown as Beatmapset).tags !== undefined
-        ? [] : (beatmapInfo.beatmapset as unknown as Beatmapset).tags.split(" ")
+    const osuTags =
+        (beatmapInfo.beatmapset as unknown as Beatmapset).tags !== undefined
+            ? (beatmapInfo.beatmapset as unknown as Beatmapset).tags
+                  .split(" ")
+                  .map((a) => a.trim())
+                  .filter((a) => a !== "")
+            : []
     const favoriteBeatmapInformation: FavoriteBeatmapInformation = {
-        id: beatmapId,
-        title: beatmapInfo.beatmapset.title,
         artist: beatmapInfo.beatmapset.artist_unicode,
-        creator: beatmapInfo.beatmapset.creator,
-        rankedStatus: RankedStatus[beatmapInfo.ranked],
         audioPreviewUrl: beatmapInfo.beatmapset.preview_url,
-        imageUrl: beatmapInfo.beatmapset.covers.card,
-        osuTags,
+        creator: beatmapInfo.beatmapset.creator,
         customTags,
+        id: beatmapId,
+        imageUrl: beatmapInfo.beatmapset.covers.card,
         mode: GameMode[gameMode],
+        osuTags,
+        rankedStatus: RankedStatus[beatmapInfo.ranked],
+        setId: beatmapInfo.beatmapset_id,
         stats: {
-            maxCombo: beatmapInfo.max_combo,
-            bpm: beatmapInfo.bpm,
-            version: beatmapInfo.version,
             accuracy: beatmapInfo.accuracy,
             ar: beatmapInfo.ar,
+            bpm: beatmapInfo.bpm,
             cs: beatmapInfo.cs,
-            drain: beatmapInfo.drain,
             difficultyRating: beatmapInfo.difficulty_rating,
+            drain: beatmapInfo.drain,
             lengthInSeconds: beatmapInfo.total_length,
-        }
+            maxCombo: beatmapInfo.max_combo,
+            version: beatmapInfo.version,
+        },
+        title: beatmapInfo.beatmapset.title,
     }
 
     // If the beatmap has public rankings get the public rank of the user
@@ -113,33 +135,40 @@ const getBeatmapInformation = async (
             oauthAccessToken,
             beatmapId,
             userId,
-            gameMode
+            gameMode,
         )
         favoriteBeatmapInformation.userRank = {
-            rank: beatmapUserScore.score.rank,
-            score: beatmapUserScore.score.score,
             accuracy: beatmapUserScore.score.accuracy,
-            maxCombo: beatmapUserScore.score.max_combo,
             counts: {
-                50: beatmapUserScore.score.statistics.count_50,
-                100: beatmapUserScore.score.statistics.count_100,
-                300: beatmapUserScore.score.statistics.count_300,
                 geki: beatmapUserScore.score.statistics.count_geki,
                 katu: beatmapUserScore.score.statistics.count_katu,
                 miss: beatmapUserScore.score.statistics.count_miss,
+                x50: beatmapUserScore.score.statistics.count_50,
+                x100: beatmapUserScore.score.statistics.count_100,
+                x300: beatmapUserScore.score.statistics.count_300,
             },
+            createdAt: beatmapUserScore.score.created_at,
+            maxCombo: beatmapUserScore.score.max_combo,
             mods: beatmapUserScore.score.mods,
             perfect: beatmapUserScore.score.perfect,
             pp: beatmapUserScore.score.pp,
-            createdAt: beatmapUserScore.score.created_at,
+            rank: beatmapUserScore.score.rank,
+            score: beatmapUserScore.score.score,
         }
-
     }
 
     return favoriteBeatmapInformation
 }
 
-(async (): Promise<void> => {
+export interface FavoriteBeatmapsData {
+    title: string
+    osuUserId: number
+    osuUserName: string
+    favoriteBeatmaps: FavoriteBeatmapInformation[]
+    createdAt: string
+}
+
+;(async (): Promise<void> => {
     // 1. Compile information about my favorite Beatmaps
     // 1.1 Get osu!api v2 OAuth credentials
     const oauthCredentials = await readOauthCredentials()
@@ -160,14 +189,21 @@ const getBeatmapInformation = async (
         )
         favoriteBeatmapsCompiledArray.push(favoriteBeatmapInfo)
     }
-    await fsp.writeFile(path.join(__dirname, "..", "compiled_beatmaps.json"), JSON.stringify({
-        title: favoriteBeatmaps.title,
-        osuUserId: favoriteBeatmaps.osuUserId,
-        osuUserName: favoriteBeatmaps.osuUserName,
-        favoriteBeatmaps: favoriteBeatmapsCompiledArray,
-        createdAt: new Date().toISOString(),
-    }, undefined, 4))
-})().catch(err => {
+    await fsp.writeFile(
+        path.join(__dirname, "..", "compiled_beatmaps.json"),
+        JSON.stringify(
+            {
+                createdAt: new Date().toISOString(),
+                favoriteBeatmaps: favoriteBeatmapsCompiledArray,
+                osuUserId: favoriteBeatmaps.osuUserId,
+                osuUserName: favoriteBeatmaps.osuUserName,
+                title: favoriteBeatmaps.title,
+            },
+            undefined,
+            4,
+        ),
+    )
+})().catch((err) => {
     console.error(err)
     process.exit(1)
 })

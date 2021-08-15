@@ -1,0 +1,283 @@
+:root {
+    --color-accent: #1e8fff;
+    --color-attention: #fbab00;
+    --color-positive: #40c900;
+
+    --color-neutral-base: #ffffff;
+    --color-neutral-base-second: #f1f1f1;
+    --color-neutral-base-third: #b3b3b3;
+    --color-neutral-base-border: #616161;
+    --color-neutral-base-contrast: #000000;
+
+    --font-family: Helvetica;
+    --font-size: 1em;
+    --line-height: 1.25em;
+
+    --content-max-width: 1000px;
+}
+
+/* Light mode */
+@media (prefers-color-scheme: light) {
+}
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-neutral-base: #000000;
+        --color-neutral-base-second: #181818;
+        --color-neutral-base-third: #2b2b2b;
+        --color-neutral-base-border: #555555;
+        --color-neutral-base-contrast: #ffffff;
+    }
+}
+
+:root {
+    --bg-color: var(--color-neutral-base);
+    --text-color: var(--color-neutral-base-contrast);
+
+    --list-element-border-color: var(--color-neutral-base-border);
+
+    --filter-text-autocomplete-border: var(--color-neutral-base-third);
+    --filter-text-autocomplete-bg: var(--color-neutral-base);
+    --filter-text-autocomplete-bg-hover: var(--color-neutral-base-second);
+    --filter-text-autocomplete-bg-select: var(--color-accent);
+    --filter-text-input-bg: var(--color-neutral-base-second);
+    --filter-text-autocomplete-hover: var(--color-neutral-base-contrast);
+    --filter-text-autocomplete-select: var(--color-neutral-base-contrast);
+
+    --beatmap-tag-bg-color: var(--color-neutral-base-second);
+    --beatmap-tag-color: var(--color-neutral-base-contrast);
+    --beatmap-tag-bg-color-attention: var(--color-attention);
+    --beatmap-tag-color-attention: var(--color-neutral-base-contrast);
+    --beatmap-tag-bg-color-positive: var(--color-positive);
+    --beatmap-tag-color-positive: var(--color-neutral-base-contrast);
+}
+
+body {
+    /* Set a background color */
+    background-color: var(--bg-color);
+
+    /* Set font properties */
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    color: var(--text-color);
+
+    /* Remove all padding and margins */
+    padding: 0;
+    margin: 0;
+
+    /* Center the content with a max-width */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--content-max-width);
+}
+
+*:focus {
+    /* Remove all outlines (don't forget to implement a custom outline function for accessibility!) */
+    outline: none;
+}
+
+section {
+    /* Remove all padding and margins */
+    padding: 0;
+    margin: 0;
+
+    /* Add a bottom margin */
+    margin-bottom: 1em;
+}
+
+div.filter-text-grid {
+    display: grid;
+    width: 100%;
+    grid-template:
+        "filter-text-input"
+        "filter-text-input-autocomplete-list";
+    grid-column-gap: 1em;
+    grid-row-gap: 0;
+    align-items: center;
+    position: relative;
+}
+
+/* Grid area elements */
+#filter-text-input {
+    grid-area: filter-text-input;
+}
+#filter-text-input-autocomplete-list {
+    grid-area: filter-text-input-autocomplete-list;
+
+    /* Add a shadow for the autocomplete overlay */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px 20px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px 0 5px;
+}
+
+div.autocomplete-element-container {
+    overflow-wrap: break-word;
+    border: none !important;
+    background-color: transparent !important;
+}
+
+/* Based on https://www.w3schools.com/howto/howto_js_autocomplete.asp */
+
+.autocomplete {
+    /* the container must be positioned relative: */
+}
+
+input {
+    border: 1px solid transparent;
+    background-color: var(--filter-text-input-bg);
+    color: var(--text-color);
+    padding: 10px;
+    width: calc(100% - 20px);
+    font-size: 16px;
+}
+
+.autocomplete-items {
+    position: absolute;
+    border: 1px solid var(--filter-text-autocomplete-border);
+    border-bottom: none;
+    /* border-top: none; */
+    z-index: 99;
+    /*position the autocomplete items to be the same width as the container:*/
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+
+.autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: var(--filter-text-autocomplete-bg);
+    border-bottom: 1px solid var(--filter-text-autocomplete-border);
+}
+
+.autocomplete-items div:hover {
+    /*when hovering an item:*/
+    background-color: var(--filter-text-autocomplete-bg-hover);
+    color: var(--filter-text-autocomplete-hover);
+}
+
+.autocomplete-active {
+    /*when navigating through the items using the arrow keys:*/
+    background-color: var(--filter-text-autocomplete-bg-select) !important;
+    color: var(--filter-text-autocomplete-select);
+}
+
+ul.beatmap-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.beatmap-list > li.beatmap-element {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1em;
+    border-bottom: var(--list-element-border-color) 1px solid;
+}
+
+ul.beatmap-list > li.beatmap-element.show {
+    display: block;
+}
+
+ul.beatmap-list > li.beatmap-element.hide {
+    display: none;
+}
+
+div.beatmap-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 0.5em;
+    grid-row-gap: 0.5em;
+
+    margin: 1em;
+}
+
+div.beatmap-container > div.beatmap-name {
+    grid-column: 1 / span 2;
+    font-weight: bold;
+}
+
+div.beatmap-container > div.beatmap-name > a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+div.beatmap-container > div.beatmap-category {
+    grid-column: 3 / span 2;
+    font-weight: bolder;
+}
+
+div.beatmap-container > div.beatmap-description {
+    grid-column: 1 / span 4;
+    font-weight: normal;
+}
+
+div.beatmap-container > div.beatmap-setup {
+    grid-column: 1 / span 4;
+    font-weight: lighter;
+}
+
+div.beatmap-container > div.beatmap-bugs {
+    grid-column: 1 / span 4;
+    font-weight: lighter;
+}
+
+div.beatmap-container > div.beatmap-tags {
+    grid-column: 1 / span 4;
+    padding: 0.25em;
+}
+
+div.beatmap-container > div.beatmap-tags > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+div.beatmap-container > div.beatmap-tags > ul > li.beatmap-tag {
+    display: inline-block;
+    border-radius: 0.5em;
+    margin: 0.25em;
+    padding: 0.5em;
+    background-color: var(--beatmap-tag-bg-color);
+    color: var(--beatmap-tag-color);
+}
+
+div.beatmap-container > div.beatmap-tags > ul > li.beatmap-tag > a {
+    text-decoration: none;
+    color: var(--beatmap-tag-color);
+}
+
+div.beatmap-container > div.beatmap-tags > ul > li.beatmap-tag-attention {
+    background-color: var(--beatmap-tag-bg-color-attention);
+    color: var(--beatmap-tag-color-attention);
+}
+
+div.beatmap-container > div.beatmap-tags > ul > li.beatmap-tag-positive {
+    background-color: var(--beatmap-tag-bg-color-positive);
+    color: var(--beatmap-tag-color-positive);
+}
+
+div.loading {
+    margin: 1em;
+    width: 100%;
+    text-align: center;
+}
+
+div.loading > span.blinkin-point::after {
+    animation: blinker 1s linear infinite;
+    content: ".";
+}
+
+div.loading > span.blinkin-point.delay0-3s::after {
+    animation-delay: 0.3s;
+}
+
+div.loading > span.blinkin-point.delay0-6s::after {
+    animation-delay: 0.6s;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}

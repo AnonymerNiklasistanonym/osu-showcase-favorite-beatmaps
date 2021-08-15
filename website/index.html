@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="./style.css" />
+        <script defer src="./main.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <section id="filter-input">
+                <form id="filter" autocomplete="off">
+                    <div class="autocomplete">
+                        <div class="filter-text-grid">
+                            <input
+                                name="text-input-filter"
+                                id="filter-text-input"
+                                placeholder="Filter beatmaps... ['a+b' (AND) | 'a b' (OR) | '-a' (NOT)]"
+                            />
+                        </div>
+                    </div>
+                </form>
+            </section>
+
+            <section id="beatmap-list">
+                <div class="loading">
+                    Loading beatmaps
+                    <span class="blinkin-point"></span>
+                    <span class="blinkin-point delay0-3s"></span>
+                    <span class="blinkin-point delay0-6s"></span>
+                </div>
+            </section>
+        </div>
+    </body>
+</html>

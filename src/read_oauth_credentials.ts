@@ -23,7 +23,9 @@ export const readOauthCredentials = async (
     const oauthCredentialsFileContent = await fsp.readFile(filePath, {
         encoding: "utf8",
     })
-    const oAuthCredentialsJson: OsuOAuthCredentialsFile = JSON.parse(oauthCredentialsFileContent)
+    const oAuthCredentialsJson: OsuOAuthCredentialsFile = JSON.parse(
+        oauthCredentialsFileContent,
+    )
     return {
         clientId: oAuthCredentialsJson.osuOAuthClientId,
         clientSecret: oAuthCredentialsJson.osuOAuthClientSecret,

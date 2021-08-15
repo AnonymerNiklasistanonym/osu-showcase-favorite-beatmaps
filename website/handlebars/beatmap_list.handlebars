@@ -1,0 +1,38 @@
+<ul class="beatmap-list" id="beatmap-list-list">
+    {{#each beatmaps}}
+        <li class="beatmap-element" data-name="{{this.title}}">
+            <div class="beatmap-container">
+                <div class="beatmap-name"><a
+                        href="https://osu.ppy.sh/beatmapsets/{{this.setId}}#{{this.mode}}/{{this.id}}"
+                    >{{this.title}} - {{this.artist}}</a></div>
+                <div class="beatmap-category">made by {{this.creator}}</div>
+                <div class="beatmap-description">{{this.rankedStatus}}
+                    -
+                    {{this.stats.version}}</div>
+                {{#if this.userRank}}
+                    <div class="beatmap-setup">Stats:
+                        {{this.stats.lengthInSeconds}}s
+                        {{this.stats.maxCombo}}x BPM{{this.stats.ar}}
+                        AR{{this.stats.ar}}
+                        CS{{this.stats.bpm}}
+                        OD{{this.stats.difficultyRating}}</div>
+                {{/if}}
+                <div class="beatmap-bugs">Achieved rank:
+                    {{this.userRank.rank}}
+                    {{this.userRank.accuracy}}%
+                    {{this.userRank.maxCombo}}/{{this.stats.maxCombo}}
+                    ({{this.userRank.counts.x300}}/{{this.userRank.counts.x100}}/{{this.userRank.counts.x50}}/{{this.userRank.counts.miss}})</div>
+                <div class="beatmap-tags">
+                    <ul>
+                        {{#each this.customTags}}
+                            <li class="beatmap-tag">{{this}}</li>
+                        {{/each}}
+                        {{#each this.osuTags}}
+                            <li class="beatmap-tag">{{this}}</li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </li>
+    {{/each}}
+</ul>
