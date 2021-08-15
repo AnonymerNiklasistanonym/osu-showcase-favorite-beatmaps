@@ -33,8 +33,9 @@ python -m http.server 8000 --directory dist/website/
   - [ ] Ranges for accuracy/score/AR/OR/PP/...
   - [ ] Values higher or lower for accuracy/score/AR/OR/PP/...
 - [ ] Externalize the website search to reuse it across different projects and battle test it
-- [ ] Add a tag filter list so that when compiling the information certain tags are directly removed (smaller file size and less clutter)
+- [x] Add a tag filter list so that when compiling the information certain tags are directly removed (smaller file size and less clutter)
 - [ ] Update HTML layout and CSS for the entries
 - [ ] Remove the mkdir command from the package.json file to make it cross platform and instead implement this via a TS/JS script
 - [ ] Add a shell script for an easy local github website deployment
 - [ ] Add more favorite maps
+- [ ] Update autocomplete implementation to also pick up suggestions when parts of the word to search are recognized
