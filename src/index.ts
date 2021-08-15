@@ -58,12 +58,17 @@ export interface FavoriteBeatmapInformation {
     userRank?: FavoriteBeatmapInformationUserRank
 }
 
+export interface getBeatmapInformationOptions {
+    filterOsuTags?: string[]
+}
+
 const getBeatmapInformation = async (
     oauthAccessToken: OAuthAccessToken,
     beatmapId: number,
     userId: number,
     customTags: string[],
     gameMode: GameMode = GameMode.osu,
+    options: getBeatmapInformationOptions = {},
 ): Promise<FavoriteBeatmapInformation> => {
     const beatmapInfo = await osuApiV2.beatmaps.lookup(
         oauthAccessToken,
@@ -93,13 +98,17 @@ const getBeatmapInformation = async (
             )})`,
         )
     }
-    const osuTags =
+    let osuTags =
         (beatmapInfo.beatmapset as unknown as Beatmapset).tags !== undefined
             ? (beatmapInfo.beatmapset as unknown as Beatmapset).tags
                   .split(" ")
                   .map((a) => a.trim())
                   .filter((a) => a !== "")
             : []
+    if (options !== undefined && options.filterOsuTags !== undefined) {
+        const filterOsuTags = options.filterOsuTags?.map(a => a.toLowerCase())
+        osuTags = osuTags.filter(osuTag => !filterOsuTags?.includes(osuTag.toLowerCase()))
+    }
     const favoriteBeatmapInformation: FavoriteBeatmapInformation = {
         artist: beatmapInfo.beatmapset.artist_unicode,
         audioPreviewUrl: beatmapInfo.beatmapset.preview_url,
@@ -186,6 +195,10 @@ export interface FavoriteBeatmapsData {
             favoriteBeatmap.osuBeatmapId,
             favoriteBeatmaps.osuUserId,
             favoriteBeatmap.customTags,
+            GameMode.osu,
+            {
+                filterOsuTags: favoriteBeatmaps.tagFilterList
+            }
         )
         favoriteBeatmapsCompiledArray.push(favoriteBeatmapInfo)
     }

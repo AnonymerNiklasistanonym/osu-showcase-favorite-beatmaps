@@ -11,6 +11,7 @@ export interface OsuFavoriteBeatmaps {
     osuUserId: number
     osuUserName: number
     favoriteBeatmaps: OsuFavoriteBeatmapsBeatmap[]
+    tagFilterList: string[]
 }
 
 export const defaultFavoriteBeatmapsFilePath = path.join(

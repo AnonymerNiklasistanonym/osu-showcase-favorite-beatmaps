@@ -79,5 +79,35 @@
 				"banger"
 			]
 		}
+	],
+	"tagFilterList": [
+		"and",
+		"artist",
+		"attacked",
+		"comix",
+		"earth",
+		"fa",
+		"featured",
+		"flims",
+		"guild",
+		"kimi",
+		"log",
+		"log_off_now",
+		"mappers",
+		"mappers'",
+		"mind",
+		"na",
+		"name",
+		"never",
+		"no",
+		"now",
+		"of",
+		"off",
+		"planet",
+		"the",
+		"toads",
+		"wa",
+		"wave",
+		"your"
 	]
 }
