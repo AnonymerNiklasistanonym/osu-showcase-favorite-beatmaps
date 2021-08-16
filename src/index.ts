@@ -10,51 +10,53 @@ import { GameMode } from "osu-api-v2/lib/types/game_mode"
 import { Beatmapset, RankedStatus } from "osu-api-v2/lib/types/beatmap"
 
 export interface FavoriteBeatmapInformationStats {
-    maxCombo: number
-    bpm: number
-    version: string
     accuracy: number
     ar: number
+    bpm: number
     cs: number
-    drain: number
     difficultyRating: number
+    drain: number
     lengthInSeconds: number
+    maxCombo: number
+    version: string
 }
 
 export interface FavoriteBeatmapInformationUserRankCounts {
-    x50: number
-    x100: number
-    x300: number
     geki: number
     katu: number
     miss: number
+    x100: number
+    x300: number
+    x50: number
 }
 
 export interface FavoriteBeatmapInformationUserRank {
-    rank: string
-    score: number
     accuracy: number
-    maxCombo: number
     counts: FavoriteBeatmapInformationUserRankCounts
+    createdAt: string
+    id: number
+    maxCombo: number
     mods: string[]
     perfect: boolean
     pp?: number
-    createdAt: string
+    rank: string
+    score: number
 }
 
 export interface FavoriteBeatmapInformation {
-    id: number
-    setId: number
-    title: string
     artist: string
-    creator: string
-    rankedStatus: string
     audioPreviewUrl: string
-    imageUrl: string
-    osuTags: string[]
+    creator: string
+    creatorId: number
     customTags: string[]
+    id: number
+    imageUrl: string
     mode: string
+    osuTags: string[]
+    rankedStatus: string
+    setId: number
     stats: FavoriteBeatmapInformationStats
+    title: string
     userRank?: FavoriteBeatmapInformationUserRank
 }
 
@@ -113,6 +115,7 @@ const getBeatmapInformation = async (
         artist: beatmapInfo.beatmapset.artist_unicode,
         audioPreviewUrl: beatmapInfo.beatmapset.preview_url,
         creator: beatmapInfo.beatmapset.creator,
+        creatorId: beatmapInfo.beatmapset.user_id,
         customTags,
         id: beatmapId,
         imageUrl: beatmapInfo.beatmapset.covers.card,
@@ -157,6 +160,7 @@ const getBeatmapInformation = async (
                 x300: beatmapUserScore.score.statistics.count_300,
             },
             createdAt: beatmapUserScore.score.created_at,
+            id: beatmapUserScore.score.id,
             maxCombo: beatmapUserScore.score.max_combo,
             mods: beatmapUserScore.score.mods,
             perfect: beatmapUserScore.score.perfect,

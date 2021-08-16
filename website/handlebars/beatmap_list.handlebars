@@ -5,25 +5,39 @@
                 <div class="beatmap-name"><a
                         href="https://osu.ppy.sh/beatmapsets/{{this.setId}}#{{this.mode}}/{{this.id}}"
                     >{{this.title}} - {{this.artist}}</a></div>
-                <div class="beatmap-category">made by {{this.creator}}</div>
+                <div class="beatmap-category"><a
+                        href="https://osu.ppy.sh/users/{{this.creatorId}}">made by {{this.creator}}</a></div>
                 <div class="beatmap-description">{{this.rankedStatus}}
                     -
                     {{this.stats.version}}</div>
+                <div class="beatmap-setup">Stats:
+                    {{convertSecsToMinsWithSecs this.stats.lengthInSeconds}}min
+                    {{this.stats.maxCombo}}x BPM{{this.stats.ar}}
+                    AR{{this.stats.ar}}
+                    CS{{this.stats.bpm}}
+                    OD{{this.stats.difficultyRating}}
+                </div>
                 {{#if this.userRank}}
-                    <div class="beatmap-setup">Stats:
-                        {{this.stats.lengthInSeconds}}s
-                        {{this.stats.maxCombo}}x BPM{{this.stats.ar}}
-                        AR{{this.stats.ar}}
-                        CS{{this.stats.bpm}}
-                        OD{{this.stats.difficultyRating}}</div>
+                    <div class="beatmap-bugs">
+                        <a href="https://osu.ppy.sh/scores/osu/{{this.userRank.id}}">
+                            Achieved rank:
+                            {{this.userRank.rank}}
+                            {{renderStringArray this.userRank.mods}}
+                            {{convertToPercent this.userRank.accuracy}}%
+                            {{#if this.userRank.pp}}{{convertToNormalPp this.userRank.pp}}pp{{/if}}
+                            {{this.userRank.maxCombo}}/{{this.stats.maxCombo}}
+                            ({{this.userRank.counts.x300}}/{{this.userRank.counts.x100}}/{{this.userRank.counts.x50}}/{{this.userRank.counts.miss}})
+
+                        </a>
+                    </div>
                 {{/if}}
-                <div class="beatmap-bugs">Achieved rank:
-                    {{this.userRank.rank}}
-                    {{this.userRank.accuracy}}%
-                    {{this.userRank.maxCombo}}/{{this.stats.maxCombo}}
-                    ({{this.userRank.counts.x300}}/{{this.userRank.counts.x100}}/{{this.userRank.counts.x50}}/{{this.userRank.counts.miss}})</div>
                 <div class="beatmap-tags">
                     <ul>
+                        <li class="beatmap-tag beatmap-tag-youtube">
+                            <a href="https://www.youtube.com/results?search_query={{encodeStringToUrlParameter this.title this.artist}}" target="_blank">
+                                Find on YouTube
+                            </a>
+                        </li>
                         {{#each this.customTags}}
                             <li class="beatmap-tag">{{this}}</li>
                         {{/each}}

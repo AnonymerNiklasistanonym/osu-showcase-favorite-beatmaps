@@ -2,6 +2,7 @@
     --color-accent: #1e8fff;
     --color-attention: #fbab00;
     --color-positive: #40c900;
+    --color-youtube: #FF0000;
 
     --color-neutral-base: #ffffff;
     --color-neutral-base-second: #f1f1f1;
@@ -50,6 +51,7 @@
     --beatmap-tag-color-attention: var(--color-neutral-base-contrast);
     --beatmap-tag-bg-color-positive: var(--color-positive);
     --beatmap-tag-color-positive: var(--color-neutral-base-contrast);
+    --beatmap-tag-color-youtube: var(--color-youtube);
 }
 
 body {
@@ -242,9 +244,19 @@ div.beatmap-container > div.beatmap-tags > ul > li.beatmap-tag {
     color: var(--beatmap-tag-color);
 }
 
+div.beatmap-container > div.beatmap-category > a {
+    text-decoration: none;
+    color: var(--beatmap-tag-color);
+}
+
 div.beatmap-container > div.beatmap-tags > ul > li.beatmap-tag > a {
     text-decoration: none;
     color: var(--beatmap-tag-color);
+}
+
+div.beatmap-container > div.beatmap-bugs > a {
+    text-decoration: none;
+    color: var(--text-color);
 }
 
 div.beatmap-container > div.beatmap-tags > ul > li.beatmap-tag-attention {
@@ -255,6 +267,11 @@ div.beatmap-container > div.beatmap-tags > ul > li.beatmap-tag-attention {
 div.beatmap-container > div.beatmap-tags > ul > li.beatmap-tag-positive {
     background-color: var(--beatmap-tag-bg-color-positive);
     color: var(--beatmap-tag-color-positive);
+}
+
+div.beatmap-container > div.beatmap-tags > ul > li.beatmap-tag-youtube {
+    background-color: var(--beatmap-tag-color-youtube);
+    color: var(--color-neutral-base);
 }
 
 div.loading {
