@@ -84,8 +84,8 @@ try {
                             //beatmap.title,
                             //`${beatmap.setId}`,
                             // TODO Integrate string arrays into the filter algorithm
-                            beatmap.osuTags.map(a => a.replace(/ /g, "+")),
-                            beatmap.customTags.map(a => a.replace(/ /g, "+")),
+                            //beatmap.osuTags.map(a => a.replace(/ /g, "+")),
+                            //beatmap.customTags.map(a => a.replace(/ /g, "+")),
                             //beatmap.rankedStatus,
                             //`rank=${beatmap.rankedStatus}`,
                             //beatmap.userRank !== undefined
@@ -106,6 +106,7 @@ try {
                                 }
                                 if (_beatmap.stringValue) {
                                     _keywords.push(_beatmap.stringValue.replace(/ /g, "+"))
+                                    _keywords.push(..._beatmap.stringValue.split(/ /g))
                                 }
                                 // TODO Integrate string arrays into the filter algorithm
                                 //      and then uncomment the following:
