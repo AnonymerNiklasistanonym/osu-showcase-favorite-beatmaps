@@ -132,8 +132,12 @@ export const elementFilter = (
             numberValue: element.stats.drain,
             type: "number",
         }, {
-            propertyName: "length",
+            propertyName: "lengthInS",
             numberValue: element.stats.lengthInSeconds,
+            type: "number",
+        }, {
+            propertyName: "lengthInMin",
+            numberValue: element.stats.lengthInSeconds / 60,
             type: "number",
         }, {
             propertyName: "maxCombo",
