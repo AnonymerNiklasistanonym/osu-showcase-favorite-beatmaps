@@ -109,7 +109,7 @@ export const elementFilter = (
     if (element.stats) {
         information.push({
             propertyName: "accuracy",
-            numberValue: element.stats.accuracy,
+            numberValue: (element.stats.accuracy * 100),
             type: "number",
         }, {
             propertyName: "ar",
@@ -124,7 +124,7 @@ export const elementFilter = (
             numberValue: element.stats.cs,
             type: "number",
         }, {
-            propertyName: "od",
+            propertyName: "stars",
             numberValue: element.stats.difficultyRating,
             type: "number",
         }, {

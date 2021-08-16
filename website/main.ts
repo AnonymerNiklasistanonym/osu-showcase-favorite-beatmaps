@@ -77,22 +77,47 @@ try {
                 jsonData.favoriteBeatmaps
                     .reduce((keywords, beatmap) => {
                         return keywords.concat(
-                            beatmap.artist,
-                            beatmap.creator,
-                            `${beatmap.id}`,
-                            beatmap.mode,
-                            beatmap.title,
-                            `${beatmap.setId}`,
-                            beatmap.osuTags,
-                            beatmap.customTags,
-                            beatmap.rankedStatus,
-                            `rank=${beatmap.rankedStatus}`,
-                            beatmap.userRank !== undefined
-                                ? `${beatmap.userRank.rank}`
-                                : [],
-                            beatmap.userRank !== undefined
-                                ? `my-rank=${beatmap.userRank.rank}`
-                                : [],
+                            //beatmap.artist,
+                            //beatmap.creator,
+                            //`${beatmap.id}`,
+                            //beatmap.mode,
+                            //beatmap.title,
+                            //`${beatmap.setId}`,
+                            // TODO Integrate string arrays into the filter algorithm
+                            beatmap.osuTags.map(a => a.replace(/ /g, "+")),
+                            beatmap.customTags.map(a => a.replace(/ /g, "+")),
+                            //beatmap.rankedStatus,
+                            //`rank=${beatmap.rankedStatus}`,
+                            //beatmap.userRank !== undefined
+                            //    ? `${beatmap.userRank.rank}`
+                            //    : [],
+                            //beatmap.userRank !== undefined
+                            //    ? `my-rank=${beatmap.userRank.rank}`
+                            //    : [],
+                            elementFilter(beatmap).reduce((_keywords, _beatmap) => {
+                                if (_beatmap.propertyName) {
+                                    _keywords.push(`${_beatmap.propertyName}=`)
+                                    if (_beatmap.type === "number") {
+                                        _keywords.push(`${_beatmap.propertyName}>=`)
+                                        _keywords.push(`${_beatmap.propertyName}<=`)
+                                        _keywords.push(`${_beatmap.propertyName}>`)
+                                        _keywords.push(`${_beatmap.propertyName}<`)
+                                    }
+                                }
+                                if (_beatmap.stringValue) {
+                                    _keywords.push(_beatmap.stringValue.replace(/ /g, "+"))
+                                }
+                                // TODO Integrate string arrays into the filter algorithm
+                                //      and then uncomment the following:
+                                //if (_beatmap.stringArrayValue) {
+                                //    _keywords.push(..._beatmap.stringArrayValue)
+                                //}
+                                // Integrating numbers doesn't add any value
+                                //if (_beatmap.numberValue) {
+                                //    _keywords.push(`${_beatmap.numberValue}`)
+                                //}
+                                return _keywords
+                            }, [] as string[])
                         )
                     }, [] as string[])
                     .map((keyword) => keyword.trim().toLowerCase()),
