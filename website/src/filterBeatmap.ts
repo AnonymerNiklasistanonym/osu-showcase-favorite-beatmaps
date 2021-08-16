@@ -1,6 +1,5 @@
 import type { FavoriteBeatmapInformation } from "../../src/index"
 import type { ElementFilterInformation } from "simple-generic-object-array-search-bar-filter/lib/filterElement"
-import { userInfo } from "os"
 
 export const elementFilter = (
     element: FavoriteBeatmapInformation

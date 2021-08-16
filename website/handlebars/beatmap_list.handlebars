@@ -8,14 +8,12 @@
                 <div class="beatmap-category"><a
                         href="https://osu.ppy.sh/users/{{this.creatorId}}">made by {{this.creator}}</a></div>
                 <div class="beatmap-description">{{this.rankedStatus}}
-                    -
+                    ({{this.stats.difficultyRating}}*, {{this.stats.bpm}} bpm) -
                     {{this.stats.version}}</div>
                 <div class="beatmap-setup">Stats:
-                    {{convertSecsToMinsWithSecs this.stats.lengthInSeconds}}min
-                    {{this.stats.maxCombo}}x BPM{{this.stats.ar}}
-                    AR{{this.stats.ar}}
-                    CS{{this.stats.bpm}}
-                    OD{{this.stats.difficultyRating}}
+                    {{convertSecsToMinsWithSecs this.stats.lengthInSeconds}} min
+                    {{this.stats.maxCombo}}x
+                    AR {{this.stats.ar}}  CS {{this.stats.cs}}
                 </div>
                 {{#if this.userRank}}
                     <div class="beatmap-bugs">
@@ -27,7 +25,6 @@
                             {{#if this.userRank.pp}}{{convertToNormalPp this.userRank.pp}}pp{{/if}}
                             {{this.userRank.maxCombo}}/{{this.stats.maxCombo}}
                             ({{this.userRank.counts.x300}}/{{this.userRank.counts.x100}}/{{this.userRank.counts.x50}}/{{this.userRank.counts.miss}})
-
                         </a>
                     </div>
                 {{/if}}
