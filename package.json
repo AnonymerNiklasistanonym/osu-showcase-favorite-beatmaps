@@ -15,7 +15,8 @@
     },
     "license": "ISC",
     "dependencies": {
-        "osu-api-v2": "^0.0.6"
+        "osu-api-v2": "^0.0.6",
+        "simple-generic-object-array-search-bar-filter": "^0.0.4"
     },
     "devDependencies": {
         "@types/node": "^16.6.1",

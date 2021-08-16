@@ -1,107 +1,150 @@
 import type { FavoriteBeatmapInformation } from "../../src/index"
+import type { ElementFilterInformation } from "simple-generic-object-array-search-bar-filter/lib/filterElement"
+import { userInfo } from "os"
 
-const filterBeatmap2 = (
-    beatmap: FavoriteBeatmapInformation,
-    filter?: string,
-): boolean => {
-    return (
-        filter === "" ||
-        filter === undefined ||
-        beatmap.title.toLowerCase().includes(filter) ||
-        beatmap.artist.toLowerCase().includes(filter) ||
-        beatmap.creator.toLowerCase().includes(filter) ||
-        `${beatmap.id}`.toLowerCase().includes(filter) ||
-        `${beatmap.setId}`.toLowerCase().includes(filter) ||
-        beatmap.creator.toLowerCase().includes(filter) ||
-        beatmap.osuTags.some((tag) => tag.toLowerCase().includes(filter)) ||
-        beatmap.customTags.some((tag) => tag.toLowerCase().includes(filter)) ||
-        beatmap.mode.toLowerCase().includes(filter) ||
-        `rank=${beatmap.rankedStatus}`.toLowerCase().includes(filter) ||
-        `my-rank=${beatmap.userRank?.rank}`.toLowerCase().includes(filter)
-    )
-}
-
-export interface ParseFilterOutput {
-    /**
-     * Any hits with these filters should be added to the results
-     * (all hits should be OR but an array element is AND)
-     */
-    beatmapFilters: (string | string[])[]
-    /**
-     * Any hits with these filters should be excluded from the results
-     * (all hits should be OR but an array element is AND)
-     */
-    beatmapFiltersExclude: (string | string[])[]
-}
-
-export const parseFilter = (filter?: string): ParseFilterOutput => {
-    // Initially only find all the filter words split by a space
-    const beatmapFilters: (string | string[])[] =
-        filter === undefined
-            ? []
-            : filter
-                  .toLowerCase()
-                  .split(" ")
-                  .map((a) => a.trim())
-                  .filter((b) => b !== "")
-    const beatmapFiltersFinal: (string | string[])[] = []
-    const beatmapFiltersExclude: (string | string[])[] = []
-    // Find words that should be combined
-    for (const programFilter of beatmapFilters) {
-        if (typeof programFilter === "string") {
-            const andFilter = programFilter
-                .split("+")
-                .map((a) => a.trim())
-                .filter((b) => b !== "")
-            // If the filter starts with a "-" add it to the exclude list
-            if (andFilter.length > 1) {
-                if (andFilter[0]?.startsWith("-")) {
-                    andFilter[0] = andFilter[0].substring(1)
-                    beatmapFiltersExclude.push(
-                        andFilter.filter((a) => a !== ""),
-                    )
-                } else {
-                    beatmapFiltersFinal.push(andFilter)
-                }
-            } else if (andFilter.length === 1) {
-                if (andFilter[0]?.length > 1 && andFilter[0]?.startsWith("-")) {
-                    beatmapFiltersExclude.push(andFilter[0].substring(1))
-                } else {
-                    beatmapFiltersFinal.push(andFilter[0])
-                }
-            }
+export const elementFilter = (
+    element: FavoriteBeatmapInformation
+): ElementFilterInformation[] => {
+    const information: ElementFilterInformation[] = [
+        {
+            propertyName: "artist",
+            stringValue: element.artist,
+            type: "string",
+        },
+        {
+            propertyName: "creator",
+            stringValue: element.creator,
+            type: "string",
+        },
+        {
+            propertyName: "creatorId",
+            numberValue: element.creatorId,
+            type: "number",
+        },
+        {
+            propertyName: "id",
+            numberValue: element.id,
+            type: "number",
+        },
+        {
+            stringValue: element.audioPreviewUrl,
+            type: "string",
+        },
+        {
+            propertyName: "customTags",
+            stringValue: element.customTags.join(" "),
+            type: "string",
+        },
+        {
+            propertyName: "osuTags",
+            stringValue: element.osuTags.join(" "),
+            type: "string",
+        },
+        {
+            propertyName: "id",
+            numberValue: element.id,
+            type: "number",
+        },
+        {
+            propertyName: "mode",
+            stringValue: element.mode,
+            type: "string",
+        },
+        {
+            propertyName: "rankedStatus",
+            stringValue: element.rankedStatus,
+            type: "string",
+        },
+        {
+            propertyName: "setId",
+            numberValue: element.setId,
+            type: "number",
+        },
+        {
+            propertyName: "title",
+            stringValue: element.title,
+            type: "string",
+        },
+    ]
+    if (element.userRank) {
+        information.push({
+            propertyName: "userRank",
+            stringValue: element.userRank.rank,
+            type: "string",
+        }, {
+            propertyName: "userRankScore",
+            numberValue: element.userRank.score,
+            type: "number",
+        }, {
+            propertyName: "userRankMaxCombo",
+            numberValue: element.userRank.maxCombo,
+            type: "number",
+        }, {
+            propertyName: "userRankCreatedAt",
+            stringValue: element.userRank.createdAt,
+            type: "string",
+        }, {
+            propertyName: "userRankMods",
+            stringValue: element.userRank.mods.join(" "),
+            type: "string",
+        }, {
+            propertyName: "userRankId",
+            numberValue: element.userRank.id,
+            type: "number",
+        })
+        if (element.userRank.perfect) {
+            information.push({
+                propertyName: "userRank",
+                stringValue: "perfect",
+                type: "string",
+            })
+        }
+        if (element.userRank.pp) {
+            information.push({
+                propertyName: "userRankPp",
+                numberValue: element.userRank.pp,
+                type: "number",
+            })
         }
     }
-
-    return {
-        beatmapFilters: beatmapFiltersFinal,
-        beatmapFiltersExclude,
-    }
-}
-
-export const filterBeatmap = (
-    beatmap: FavoriteBeatmapInformation,
-    filter?: string,
-): boolean => {
-    const parsedFilter = parseFilter(filter)
-
-    return (
-        (parsedFilter.beatmapFilters.length === 0 ||
-            parsedFilter.beatmapFilters.some((beatmapFilter) => {
-                if (typeof beatmapFilter === "string") {
-                    return filterBeatmap2(beatmap, beatmapFilter)
-                } else {
-                    return beatmapFilter.every((a) =>
-                        filterBeatmap2(beatmap, a),
-                    )
-                }
-            })) &&
-        !parsedFilter.beatmapFiltersExclude.some((beatmapFilter) => {
-            if (typeof beatmapFilter === "string") {
-                return filterBeatmap2(beatmap, beatmapFilter)
-            } else {
-                return beatmapFilter.every((a) => filterBeatmap2(beatmap, a))
-            }
+    if (element.stats) {
+        information.push({
+            propertyName: "accuracy",
+            numberValue: element.stats.accuracy,
+            type: "number",
+        }, {
+            propertyName: "ar",
+            numberValue: element.stats.ar,
+            type: "number",
+        }, {
+            propertyName: "bpm",
+            numberValue: element.stats.bpm,
+            type: "number",
+        }, {
+            propertyName: "cs",
+            numberValue: element.stats.cs,
+            type: "number",
+        }, {
+            propertyName: "od",
+            numberValue: element.stats.difficultyRating,
+            type: "number",
+        }, {
+            propertyName: "drain",
+            numberValue: element.stats.drain,
+            type: "number",
+        }, {
+            propertyName: "length",
+            numberValue: element.stats.lengthInSeconds,
+            type: "number",
+        }, {
+            propertyName: "maxCombo",
+            numberValue: element.stats.maxCombo,
+            type: "number",
+        }, {
+            propertyName: "version",
+            stringValue: element.stats.version,
+            type: "string",
         })
-    )
+    }
+    return information
 }

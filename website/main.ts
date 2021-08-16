@@ -1,10 +1,11 @@
 import escapeStringRegexp from "escape-string-regexp"
+import sgoasbf from "simple-generic-object-array-search-bar-filter"
 import * as queryString from "query-string"
 import type { FavoriteBeatmapsData } from "../src"
 
 import { autocompleteTextInput } from "./src/autocompleteTextInput"
 import { createBeatmapList } from "./src/createBeatmapList"
-import { filterBeatmap } from "./src/filterBeatmap"
+import { elementFilter } from "./src/filterBeatmap"
 
 try {
     const response = await fetch("./favorite_beatmaps.json")
@@ -19,8 +20,9 @@ try {
     beatmapList.removeChild(beatmapList.querySelector("div.loading"))
     beatmapList.appendChild(beatmapListElement)
     const filterList = (filter?: string) => {
+        const parsedFilter = sgoasbf.parseFilter(filter)
         const filteredBeatmaps = jsonData.favoriteBeatmaps.filter((beatmap) =>
-            filterBeatmap(beatmap, filter),
+            sgoasbf.filterElement(beatmap, elementFilter, parsedFilter).match,
         )
         const beatmapListList = document.getElementById("beatmap-list-list")
         for (const childNode of beatmapListList.childNodes) {
