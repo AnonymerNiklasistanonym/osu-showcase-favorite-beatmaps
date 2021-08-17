@@ -3,6 +3,7 @@
     --color-attention: #fbab00;
     --color-positive: #40c900;
     --color-youtube: #ff0000;
+    --color-preview: #bb00c2;
 
     --color-neutral-base: #ffffff;
     --color-neutral-base-second: #f1f1f1;
@@ -52,6 +53,7 @@
     --beatmap-tag-bg-color-positive: var(--color-positive);
     --beatmap-tag-color-positive: var(--color-neutral-base-contrast);
     --beatmap-tag-color-youtube: var(--color-youtube);
+    --beatmap-tag-color-preview: var(--color-preview);
 }
 
 body {
@@ -178,6 +180,13 @@ ul.beatmap-list > li.beatmap-element {
     border-bottom: var(--list-element-border-color) 1px solid;
 }
 
+ul.beatmap-list > li.beatmap-element > iframe.beatmap-preview {
+    border: none;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding-bottom: 1em;
+}
+
 ul.beatmap-list > li.beatmap-element.show {
     display: block;
 }
@@ -271,7 +280,13 @@ div.beatmap-container > div.beatmap-tags > ul > li.beatmap-tag-positive {
 
 div.beatmap-container > div.beatmap-tags > ul > li.beatmap-tag-youtube {
     background-color: var(--beatmap-tag-color-youtube);
-    color: var(--color-neutral-base);
+    color: var(--beatmap-tag-color);
+}
+
+div.beatmap-container > div.beatmap-tags > ul > li.beatmap-tag-preview {
+    background-color: var(--beatmap-tag-color-preview);
+    color: var(--beatmap-tag-color);
+    cursor: pointer;
 }
 
 div.loading {

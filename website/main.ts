@@ -19,6 +19,32 @@ try {
     const beatmapListElement = createBeatmapList(jsonData.favoriteBeatmaps)
     beatmapList.removeChild(beatmapList.querySelector("div.loading"))
     beatmapList.appendChild(beatmapListElement)
+    for (const favoriteBeatmap of jsonData.favoriteBeatmaps) {
+        const htmlElement = document.querySelector(`li[data-id="${favoriteBeatmap.id}"]`)
+        const previewButton = htmlElement.querySelector(`div.beatmap-tags li.beatmap-tag-preview`)
+        previewButton.addEventListener("click", () => {
+            // Check if an iframe already exists:
+            const iframeClassName = "beatmap-preview"
+            const iframeElements = htmlElement.getElementsByClassName(iframeClassName)
+            if (iframeElements.length === 0) {
+                // If not found add iframe
+                const iframe = document.createElement("iframe")
+                iframe.src = `https://jmir.xyz/osu/preview.html#${favoriteBeatmap.id}`;
+                iframe.width = "100%";
+                iframe.height = "280em";
+                iframe.classList.add(iframeClassName)
+                iframe.allow = "fullscreen"
+                htmlElement.appendChild(iframe)
+                // Change button text
+                previewButton.textContent = "Close jmir.xyz preview"
+            } else {
+                // If already found remove iframe
+                iframeElements[0].parentElement.removeChild(iframeElements[0])
+                // Change button text
+                previewButton.textContent = "Preview with jmir.xyz"
+            }
+        })
+    }
     const filterList = (filter?: string) => {
         const parsedFilter = sgoasbf.parseFilter(filter)
         console.log(parsedFilter)
