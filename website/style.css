@@ -16,11 +16,14 @@
     --line-height: 1.25em;
 
     --content-max-width: 1000px;
+
+    --grid-columns: 1fr 1fr;
 }
 
 /* Light mode */
 @media (prefers-color-scheme: light) {
 }
+
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
     :root {
@@ -29,6 +32,13 @@
         --color-neutral-base-third: #2b2b2b;
         --color-neutral-base-border: #555555;
         --color-neutral-base-contrast: #ffffff;
+    }
+}
+
+/* Smaller screen mode */
+@media only screen and (max-width: 700px) {
+    :root {
+        --grid-columns: 1fr;
     }
 }
 
@@ -106,6 +116,7 @@ div.filter-text-grid {
 #filter-text-input {
     grid-area: filter-text-input;
 }
+
 #filter-text-input-autocomplete-list {
     grid-area: filter-text-input-autocomplete-list;
 
@@ -122,10 +133,6 @@ div.autocomplete-element-container {
 }
 
 /* Based on https://www.w3schools.com/howto/howto_js_autocomplete.asp */
-
-.autocomplete {
-    /* the container must be positioned relative: */
-}
 
 input {
     border: 1px solid transparent;
@@ -167,35 +174,82 @@ input {
     color: var(--filter-text-autocomplete-select);
 }
 
-ul.beatmap-list {
-    list-style: none;
+section#beatmap-list > div.beatmap-grid-container {
     padding: 0;
     margin: 0;
 }
 
-ul.beatmap-list > li.beatmap-element {
-    margin: 0;
+section#beatmap-list > div.beatmap-grid-container > div.beatmap-grid {
     padding: 0;
-    margin-bottom: 1em;
-    border-bottom: var(--list-element-border-color) 1px solid;
-}
-
-ul.beatmap-list > li.beatmap-element > iframe.beatmap-preview {
-    border: none;
-    background-color: var(--bg-color);
     margin: 0;
-    padding-bottom: 1em;
+
+    display: grid;
+    grid-template-columns: var(--grid-columns);
 }
 
-ul.beatmap-list > li.beatmap-element.show {
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item {
+    margin: 0.5em;
+    padding: 0;
+
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+
+    /*border: var(--list-element-border-color) 1px solid;*/
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    border-radius: 5px;
+}
+
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item.show {
     display: block;
 }
 
-ul.beatmap-list > li.beatmap-element.hide {
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item.hide {
     display: none;
 }
 
-div.beatmap-container {
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item
+    > div.beatmap-background-image {
+    margin: 0;
+    padding: 0;
+
+    background-size: cover;
+    background-position: center;
+
+    height: 11em;
+
+    border-radius: 5px 5px 0 0;
+}
+
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item
+    > iframe.beatmap-preview {
+    border: none;
+    background-color: var(--bg-color);
+    margin: 0;
+    margin-bottom: -7px;
+    padding: 0;
+    border-radius: 0 0 5px 5px;
+}
+
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item
+    > div.beatmap-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-column-gap: 0.5em;
@@ -204,86 +258,216 @@ div.beatmap-container {
     margin: 1em;
 }
 
-div.beatmap-container > div.beatmap-name {
-    grid-column: 1 / span 2;
-    font-weight: bold;
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item
+    > div.beatmap-container
+    > div.beatmap-name {
+    grid-column: 1 / span 4;
 }
 
-div.beatmap-container > div.beatmap-name > a {
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item
+    > div.beatmap-container
+    > div.beatmap-name
+    > a {
     text-decoration: none;
     color: var(--text-color);
 }
 
-div.beatmap-container > div.beatmap-category {
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item
+    > div.beatmap-container
+    > div.beatmap-name
+    > a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item
+    > div.beatmap-container
+    > div.beatmap-name
+    > a.beatmap-title-artist {
+    font-weight: bold;
+}
+
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item
+    > div.beatmap-container
+    > div.beatmap-name
+    > a.beatmap-creator {
+    font-weight: lighter;
+    font-style: italic;
+}
+
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item
+    > div.beatmap-container
+    > div.beatmap-category {
     grid-column: 3 / span 2;
     font-weight: bolder;
 }
 
-div.beatmap-container > div.beatmap-description {
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item
+    > div.beatmap-container
+    > div.beatmap-description {
     grid-column: 1 / span 4;
     font-weight: normal;
 }
 
-div.beatmap-container > div.beatmap-setup {
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item
+    > div.beatmap-container
+    > div.beatmap-setup {
     grid-column: 1 / span 4;
     font-weight: lighter;
 }
 
-div.beatmap-container > div.beatmap-bugs {
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item
+    > div.beatmap-container
+    > div.beatmap-bugs {
     grid-column: 1 / span 4;
     font-weight: lighter;
 }
 
-div.beatmap-container > div.beatmap-tags {
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item
+    > div.beatmap-container
+    > div.beatmap-tags {
     grid-column: 1 / span 4;
-    padding: 0.25em;
+    padding: 00;
 }
 
-div.beatmap-container > div.beatmap-tags > ul {
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item
+    > div.beatmap-container
+    > div.beatmap-tags
+    > ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
-div.beatmap-container > div.beatmap-tags > ul > li.beatmap-tag {
+
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item
+    > div.beatmap-container
+    > div.beatmap-tags
+    > ul
+    > li.beatmap-tag {
     display: inline-block;
     border-radius: 0.5em;
     margin: 0.25em;
     padding: 0.5em;
     background-color: var(--beatmap-tag-bg-color);
     color: var(--beatmap-tag-color);
+    font-size: calc(var(--font-size) * 5 / 6);
 }
 
-div.beatmap-container > div.beatmap-category > a {
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item
+    > div.beatmap-container
+    > div.beatmap-category
+    > a {
     text-decoration: none;
     color: var(--beatmap-tag-color);
 }
 
-div.beatmap-container > div.beatmap-tags > ul > li.beatmap-tag > a {
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item
+    > div.beatmap-container
+    > div.beatmap-tags
+    > ul
+    > li.beatmap-tag
+    > a {
     text-decoration: none;
     color: var(--beatmap-tag-color);
 }
 
-div.beatmap-container > div.beatmap-bugs > a {
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item
+    > div.beatmap-container
+    > div.beatmap-bugs
+    > a {
     text-decoration: none;
     color: var(--text-color);
 }
 
-div.beatmap-container > div.beatmap-tags > ul > li.beatmap-tag-attention {
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item
+    > div.beatmap-container
+    > div.beatmap-tags
+    > ul
+    > li.beatmap-tag-attention {
     background-color: var(--beatmap-tag-bg-color-attention);
     color: var(--beatmap-tag-color-attention);
 }
 
-div.beatmap-container > div.beatmap-tags > ul > li.beatmap-tag-positive {
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item
+    > div.beatmap-container
+    > div.beatmap-tags
+    > ul
+    > li.beatmap-tag-positive {
     background-color: var(--beatmap-tag-bg-color-positive);
     color: var(--beatmap-tag-color-positive);
 }
 
-div.beatmap-container > div.beatmap-tags > ul > li.beatmap-tag-youtube {
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item
+    > div.beatmap-container
+    > div.beatmap-tags
+    > ul
+    > li.beatmap-tag-youtube {
     background-color: var(--beatmap-tag-color-youtube);
     color: var(--beatmap-tag-color);
 }
 
-div.beatmap-container > div.beatmap-tags > ul > li.beatmap-tag-preview {
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item
+    > div.beatmap-container
+    > div.beatmap-tags
+    > ul
+    > li.beatmap-tag-preview {
     background-color: var(--beatmap-tag-color-preview);
     color: var(--beatmap-tag-color);
     cursor: pointer;

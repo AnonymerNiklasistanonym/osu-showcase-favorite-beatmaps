@@ -39,3 +39,22 @@ python -m http.server 8000 --directory dist/website/
 - [ ] Add a shell script for an easy local github website deployment
 - [ ] Add more favorite maps
 - [ ] Update autocomplete implementation to also pick up suggestions when parts of the word to search are recognized
+
+## Script for easy map data aquisition:
+
+You can run this script in the console of the website to easily add a new map to the JSON data file (`Copy Object` with Firefox Dev Tools):
+
+
+```js
+const osuBeatmapId = window.location.href.split("/").pop()
+const title = document.querySelector(".beatmapset-header__details-text.beatmapset-header__details-text--title .beatmapset-header__details-text-link").textContent
+const artist = document.querySelector(".beatmapset-header__details-text.beatmapset-header__details-text--artist .beatmapset-header__details-text-link").textContent
+const stars = document.querySelector(".beatmapset-beatmap-picker__beatmap.beatmapset-beatmap-picker__beatmap--active div").dataset.stars
+const rankedStatus = document.querySelector(".beatmapset-status").textContent
+
+console.log({
+  comment: `${title}, ${artist}, ${stars}, ${rankedStatus}`,
+  osuBeatmapId,
+  customTags: []
+})
+```

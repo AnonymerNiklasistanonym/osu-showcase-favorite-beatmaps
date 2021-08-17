@@ -120,7 +120,7 @@ const getBeatmapInformation = async (
         creatorId: beatmapInfo.beatmapset.user_id,
         customTags,
         id: beatmapId,
-        imageUrl: beatmapInfo.beatmapset.covers.card,
+        imageUrl: beatmapInfo.beatmapset.covers["card@2x"],
         mode: GameMode[gameMode],
         osuTags,
         rankedStatus: RankedStatus[beatmapInfo.ranked],

@@ -8,13 +8,17 @@
 			"comment": "Nandemo Nai ya, RADWIMPS, 4.41, ranked",
 			"osuBeatmapId": 1095534,
 			"customTags": [
-				"first-100pp"
+				"fun",
+				"first-100pp",
+				"difficult-end-jump"
 			]
 		},
 		{
 			"comment": "Blood Sugar, Pendulum, 3.84, loved",
 			"osuBeatmapId": 112385,
 			"customTags": [
+				"fun",
+				"good-song",
 				"banger"
 			]
 		},
@@ -22,6 +26,8 @@
 			"comment": "Emo Hardcore, LIDA x FRIK PATI, 4.49, ranked",
 			"osuBeatmapId": 3086537,
 			"customTags": [
+				"fun",
+				"good-song",
 				"banger"
 			]
 		},
@@ -29,13 +35,17 @@
 			"comment": "Cold Green Eyes ft. Roos Denayer, Station Earth, 5.17, ranked",
 			"osuBeatmapId": 814293,
 			"customTags": [
-				"first-5star"
+				"fun",
+				"good-song",
+				"first-5*"
 			]
 		},
 		{
 			"comment": "I'll See You Again (feat. Chi Chi), S3RL, 3.50, ranked",
 			"osuBeatmapId": 1649184,
 			"customTags": [
+				"fun",
+				"good-song",
 				"banger"
 			]
 		},
@@ -43,6 +53,8 @@
 			"comment": "I'll See You Again (feat. Chi Chi), S3RL, 4.46, ranked",
 			"osuBeatmapId": 1649183,
 			"customTags": [
+				"fun",
+				"good-song",
 				"banger"
 			]
 		},
@@ -50,6 +62,8 @@
 			"comment": "Battle Sirens (RIOT Remix), Knife Party & Tom Morello, 4.66, ranked",
 			"osuBeatmapId": 1558497,
 			"customTags": [
+				"fun",
+				"good-song",
 				"banger"
 			]
 		},
@@ -57,18 +71,17 @@
 			"comment": "Shiroki Yami no Arabesque (Soleily Remix), Marie, 3.64, graveyard",
 			"osuBeatmapId": 1839949,
 			"customTags": [
+				"fun",
+				"good-song",
 				"banger"
 			]
-		},
-		{
-			"comment": "The Silent Ones, Varien, 3.30, ranked",
-			"osuBeatmapId": 1025675,
-			"customTags": []
 		},
 		{
 			"comment": "LIBIDO, onumi, 3.31, ranked",
 			"osuBeatmapId": 2876949,
 			"customTags": [
+				"fun",
+				"good-song",
 				"banger"
 			]
 		},
@@ -76,11 +89,296 @@
 			"comment": "LIBIDO, onumi, 2.36, ranked",
 			"osuBeatmapId": 2879095,
 			"customTags": [
+				"fun",
+				"good-song",
 				"banger"
+			]
+		},
+		{
+			"comment": "Alien Alien (Nhato Remix), NayutalieN, 3.61, loved",
+			"osuBeatmapId": 1439682,
+			"customTags": [
+				"fun",
+				"good-song"
+			]
+		},
+		{
+			"comment": "Time Trials, Hyper Potions, 4.31, ranked",
+			"osuBeatmapId": 1611502,
+			"customTags": [
+				"fun",
+				"good-song"
+			]
+		},
+		{
+			"comment": "CURSED, AViVA, 3.62, graveyard",
+			"osuBeatmapId": 2753570,
+			"customTags": [
+				"fun",
+				"good-song"
+			]
+		},
+		{
+			"comment": "Ya zhenyus' na devochke iz anime, Egor Nats, 4.29, loved",
+			"osuBeatmapId": 1571507,
+			"customTags": [
+				"fun",
+				"good-song"
+			]
+		},
+		{
+			"comment": "Hoohah (VIP Edit), Fox Stevenson & Curbi, 4.38, ranked",
+			"osuBeatmapId": 1295250,
+			"customTags": [
+				"fun",
+				"good-song"
+			]
+		},
+		{
+			"comment": "Ether Strike, Akira Complex, 3.44, ranked",
+			"osuBeatmapId": 2423711,
+			"customTags": [
+				"fun",
+				"good-song",
+				"banger"
+			]
+		},
+		{
+			"comment": "Samurai, Rameses B, 3.57, ranked",
+			"osuBeatmapId": 2871730,
+			"customTags": [
+				"fun",
+				"good-song",
+				"banger",
+				"chill-song"
+			]
+		},
+		{
+			"comment": "Samurai, Rameses B, 4.56, ranked",
+			"osuBeatmapId": 2871731,
+			"customTags": [
+				"fun",
+				"good-song",
+				"banger",
+				"chill-song"
+			]
+		},
+		{
+			"comment": "Gold Dust (Sonic Entropy Remix), DJ Fresh, 3.87, Loved",
+			"osuBeatmapId": "178796",
+			"customTags": [
+				"good-song",
+				"banger",
+				"jumpy",
+				"fun"
+			]
+		},
+		{
+			"comment": "Face Down, Feint, 4.14, ranked",
+			"osuBeatmapId": "834763",
+			"customTags": [
+				"good-song",
+				"banger",
+				"fun"
+			]
+		},
+		{
+			"comment": "[BLEED BLOOD], Camellia, 3.68, ranked",
+			"osuBeatmapId": "2861740",
+			"customTags": [
+				"good-song",
+				"banger",
+				"difficult-end-slider-break",
+				"fun"
+			]
+		},
+		{
+			"comment": "NA KIEVSKOM DINAMO, DETI RAVE, 3.87, graveyard",
+			"osuBeatmapId": "2626552",
+			"customTags": [
+				"good-song",
+				"banger",
+				"fun"
+			]
+		},
+		{
+			"comment": "Try This, Pegboard Nerds, 4.56, ",
+			"osuBeatmapId": "675330",
+			"customTags": [
+				"good-song",
+				"banger",
+				"fun"
+			]
+		},
+		{
+			"comment": "Try This, Pegboard Nerds, 3.6, ",
+			"osuBeatmapId": "743972",
+			"customTags": [
+				"good-song",
+				"banger",
+				"fun"
+			]
+		},
+		{
+			"comment": "Run ft. RedFoo of LMFAO (Speed Up Ver.), Flo Rida, 4.17, Ranked",
+			"osuBeatmapId": "682966",
+			"customTags": [
+				"good-song",
+				"fun"
+			]
+		},
+		{
+			"comment": "Blinding Lights, The Weeknd, 4.45, Ranked",
+			"osuBeatmapId": "2351162",
+			"customTags": [
+				"good-song",
+				"banger",
+				"fun",
+				"chill"
+			]
+		},
+		{
+			"comment": "Stronger, TheFatRat, Slaydit, Anjulie, 4.02, Friedhof",
+			"osuBeatmapId": "2548107",
+			"customTags": [
+				"good-song",
+				"banger",
+				"fun"
+			]
+		},
+		{
+			"comment": "Say Goodbye, Krewella, 3.67, Loved",
+			"osuBeatmapId": "959407",
+			"customTags": [
+				"good-song",
+				"banger",
+				"fun"
+			]
+		},
+		{
+			"comment": "Resonance, HOME, 3.58, Friedhof",
+			"osuBeatmapId": "2279417",
+			"customTags": [
+				"good-song",
+				"banger",
+				"fun",
+				"chill"
+			]
+		},
+		{
+			"comment": "Gold Dust, DJ Fresh, 4.2, Ranked",
+			"osuBeatmapId": "1963417",
+			"customTags": [
+				"good-song",
+				"banger",
+				"fun"
+			]
+		},
+		{
+			"comment": "Ultraviolet, Fred V & Grafix, 3.87, Ranked",
+			"osuBeatmapId": "2643866",
+			"customTags": [
+				"good-song",
+				"banger",
+				"fun",
+				"chill"
+			]
+		},
+		{
+			"comment": "Moonlight Sonata, cYsmix, 3.68, Ranked",
+			"osuBeatmapId": "1139966",
+			"customTags": [
+				"good-song",
+				"banger",
+				"fun"
+			]
+		},
+		{
+			"comment": "Flash Funk (Marshmello Remix), League of Legends, 4.02, Ranked",
+			"osuBeatmapId": "1649031",
+			"customTags": [
+				"good-song",
+				"banger",
+				"fun"
+			]
+		},
+		{
+			"comment": "S o m e o n e  S p e c i a l, tomatoism, 3.43, Friedhof",
+			"osuBeatmapId": "2578804",
+			"customTags": [
+				"good-song",
+				"banger",
+				"fun"
+			]
+		},
+		{
+			"comment": "Big And Chunky, Will.I.Am, 4.05, Friedhof",
+			"osuBeatmapId": "1955290",
+			"customTags": [
+				"good-song",
+				"banger",
+				"fun",
+				"jumpy"
+			]
+		},
+		{
+			"comment": "YEAH RIGHT, Joji, 4.24, ",
+			"osuBeatmapId": "1861763",
+			"customTags": [
+				"good-song",
+				"banger",
+				"fun",
+				"chill"
+			]
+		},
+		{
+			"comment": "Immortal (MewOne!, Syberian Beast Remix), Marina, 4.69, Friedhof",
+			"osuBeatmapId": "2318259",
+			"customTags": [
+				"good-song",
+				"banger",
+				"fun"
+			]
+		},
+		{
+			"comment": "Anubis, EnV, 3.26, Friedhof",
+			"osuBeatmapId": "2466306",
+			"customTags": [
+				"good-song",
+				"banger",
+				"fun"
+			]
+		},
+		{
+			"comment": "Anubis, EnV, 4.06, Friedhof",
+			"osuBeatmapId": "2466012",
+			"customTags": [
+				"good-song",
+				"banger",
+				"fun"
+			]
+		},
+		{
+			"comment": "Ticking, TIN, 3.65, Friedhof",
+			"osuBeatmapId": "1966264",
+			"customTags": [
+				"good-song",
+				"banger",
+				"fun"
+			]
+		},
+		{
+			"comment": "MARENOL, LeaF, 3.1, ",
+			"osuBeatmapId": "2241478",
+			"customTags": [
+				"good-song",
+				"banger",
+				"fun"
 			]
 		}
 	],
 	"tagFilterList": [
+		"2",
 		"and",
 		"artist",
 		"attacked",

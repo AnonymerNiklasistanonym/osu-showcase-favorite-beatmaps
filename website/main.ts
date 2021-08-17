@@ -7,31 +7,40 @@ import { autocompleteTextInput } from "./src/autocompleteTextInput"
 import { createBeatmapList } from "./src/createBeatmapList"
 import { elementFilter } from "./src/filterBeatmap"
 
+const debug = false
+
 try {
     const response = await fetch("./favorite_beatmaps.json")
     if (!response.ok) {
         throw `File (${response.url}) could not be fetched (${response.status}=${response.statusText})`
     }
     const jsonData = (await response.json()) as FavoriteBeatmapsData
-    console.log(jsonData)
+    if (debug) {
+        console.debug(jsonData)
+    }
 
     const beatmapList = document.getElementById("beatmap-list")
     const beatmapListElement = createBeatmapList(jsonData.favoriteBeatmaps)
     beatmapList.removeChild(beatmapList.querySelector("div.loading"))
     beatmapList.appendChild(beatmapListElement)
     for (const favoriteBeatmap of jsonData.favoriteBeatmaps) {
-        const htmlElement = document.querySelector(`li[data-id="${favoriteBeatmap.id}"]`)
-        const previewButton = htmlElement.querySelector(`div.beatmap-tags li.beatmap-tag-preview`)
+        const htmlElement = document.querySelector(
+            `div[data-id="${favoriteBeatmap.id}"]`,
+        )
+        const previewButton = htmlElement.querySelector(
+            `div.beatmap-tags li.beatmap-tag-preview`,
+        )
         previewButton.addEventListener("click", () => {
             // Check if an iframe already exists:
             const iframeClassName = "beatmap-preview"
-            const iframeElements = htmlElement.getElementsByClassName(iframeClassName)
+            const iframeElements =
+                htmlElement.getElementsByClassName(iframeClassName)
             if (iframeElements.length === 0) {
                 // If not found add iframe
                 const iframe = document.createElement("iframe")
-                iframe.src = `https://jmir.xyz/osu/preview.html#${favoriteBeatmap.id}`;
-                iframe.width = "100%";
-                iframe.height = "280em";
+                iframe.src = `https://jmir.xyz/osu/preview.html#${favoriteBeatmap.id}`
+                iframe.width = "100%"
+                iframe.height = "280em"
                 iframe.classList.add(iframeClassName)
                 iframe.allow = "fullscreen"
                 htmlElement.appendChild(iframe)
@@ -47,11 +56,13 @@ try {
     }
     const filterList = (filter?: string) => {
         const parsedFilter = sgoasbf.parseFilter(filter)
-        console.log(parsedFilter)
+        if (debug) {
+            console.debug(parsedFilter)
+        }
         const filteredBeatmaps = jsonData.favoriteBeatmaps.filter(
             (beatmap) =>
                 sgoasbf.filterElement(beatmap, elementFilter, parsedFilter, {
-                    debug: true,
+                    debug,
                 }).match,
         )
         const beatmapListList = document.getElementById("beatmap-list-list")
@@ -60,9 +71,7 @@ try {
             const elementId = element?.dataset?.id.toString()
             if (elementId && childNode.nodeType === Node.ELEMENT_NODE) {
                 if (
-                    filteredBeatmaps.some(
-                        (a) => a.id.toString() === elementId,
-                    )
+                    filteredBeatmaps.some((a) => a.id.toString() === elementId)
                 ) {
                     element?.classList.remove("hide")
                     element?.classList.add("show")

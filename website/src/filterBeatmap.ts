@@ -16,13 +16,13 @@ export const elementFilter = (
             type: "string",
         },
         {
-            propertyName: "creatorId",
             numberValue: element.creatorId,
+            propertyName: "creatorId",
             type: "number",
         },
         {
-            propertyName: "id",
             numberValue: element.id,
+            propertyName: "id",
             type: "number",
         },
         {
@@ -40,8 +40,8 @@ export const elementFilter = (
             type: "string-array",
         },
         {
-            propertyName: "id",
             numberValue: element.id,
+            propertyName: "id",
             type: "number",
         },
         {
@@ -75,8 +75,8 @@ export const elementFilter = (
             type: "string",
         },
         {
-            propertyName: "setId",
             numberValue: element.setId,
+            propertyName: "setId",
             type: "number",
         },
         {
@@ -115,13 +115,13 @@ export const elementFilter = (
                 type: "string",
             },
             {
-                propertyName: "userRankScore",
                 numberValue: element.userRank.score,
+                propertyName: "userRankScore",
                 type: "number",
             },
             {
-                propertyName: "userRankMaxCombo",
                 numberValue: element.userRank.maxCombo,
+                propertyName: "userRankMaxCombo",
                 type: "number",
             },
             {
@@ -135,8 +135,8 @@ export const elementFilter = (
                 type: "string-array",
             },
             {
-                propertyName: "userRankId",
                 numberValue: element.userRank.id,
+                propertyName: "userRankId",
                 type: "number",
             },
         )
@@ -149,57 +149,63 @@ export const elementFilter = (
         }
         if (element.userRank.pp) {
             information.push({
-                propertyName: "userRankPp",
                 numberValue: element.userRank.pp,
+                propertyName: "userRankPp",
                 type: "number",
+            })
+        }
+        if (element.userRank.maxCombo === element.stats.maxCombo) {
+            information.push({
+                stringValue: "fc",
+                type: "string",
             })
         }
     }
     if (element.stats) {
         information.push(
             {
-                propertyName: "accuracy",
                 numberValue: element.stats.accuracy * 100,
+                propertyName: "accuracy",
                 type: "number",
             },
             {
-                propertyName: "ar",
                 numberValue: element.stats.ar,
+                propertyName: "ar",
                 type: "number",
             },
             {
-                propertyName: "bpm",
                 numberValue: element.stats.bpm,
+                propertyName: "bpm",
                 type: "number",
             },
             {
-                propertyName: "cs",
                 numberValue: element.stats.cs,
+                propertyName: "cs",
                 type: "number",
             },
             {
-                propertyName: "stars",
                 numberValue: element.stats.difficultyRating,
+                propertyName: "stars",
                 type: "number",
             },
             {
-                propertyName: "drain",
                 numberValue: element.stats.drain,
+                propertyName: "drain",
                 type: "number",
             },
             {
-                propertyName: "lengthInS",
                 numberValue: element.stats.lengthInSeconds,
+                propertyName: "lengthInS",
                 type: "number",
             },
             {
-                propertyName: "lengthInMin",
                 numberValue: element.stats.lengthInSeconds / 60,
+                propertyName: "lengthInMin",
                 type: "number",
             },
             {
-                propertyName: "maxCombo",
                 numberValue: element.stats.maxCombo,
+                propertyName: "maxCombo",
                 type: "number",
             },
             {
