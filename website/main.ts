@@ -31,11 +31,11 @@ try {
         const beatmapListList = document.getElementById("beatmap-list-list")
         for (const childNode of beatmapListList.childNodes) {
             const element = childNode as HTMLElement
-            const elementName = element?.dataset?.name.toLocaleLowerCase()
-            if (elementName && childNode.nodeType === Node.ELEMENT_NODE) {
+            const elementId = element?.dataset?.id.toString()
+            if (elementId && childNode.nodeType === Node.ELEMENT_NODE) {
                 if (
                     filteredBeatmaps.some(
-                        (a) => a.title.toLocaleLowerCase() === elementName,
+                        (a) => a.id.toString() === elementId,
                     )
                 ) {
                     element?.classList.remove("hide")
