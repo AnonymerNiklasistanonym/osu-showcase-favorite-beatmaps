@@ -21,8 +21,12 @@ try {
     beatmapList.appendChild(beatmapListElement)
     const filterList = (filter?: string) => {
         const parsedFilter = sgoasbf.parseFilter(filter)
-        const filteredBeatmaps = jsonData.favoriteBeatmaps.filter((beatmap) =>
-            sgoasbf.filterElement(beatmap, elementFilter, parsedFilter).match,
+        console.log(parsedFilter)
+        const filteredBeatmaps = jsonData.favoriteBeatmaps.filter(
+            (beatmap) =>
+                sgoasbf.filterElement(beatmap, elementFilter, parsedFilter, {
+                    debug: true,
+                }).match,
         )
         const beatmapListList = document.getElementById("beatmap-list-list")
         for (const childNode of beatmapListList.childNodes) {
@@ -77,48 +81,73 @@ try {
                 jsonData.favoriteBeatmaps
                     .reduce((keywords, beatmap) => {
                         return keywords.concat(
-                            //beatmap.artist,
-                            //beatmap.creator,
-                            //`${beatmap.id}`,
-                            //beatmap.mode,
-                            //beatmap.title,
-                            //`${beatmap.setId}`,
-                            // TODO Integrate string arrays into the filter algorithm
-                            //beatmap.osuTags.map(a => a.replace(/ /g, "+")),
-                            //beatmap.customTags.map(a => a.replace(/ /g, "+")),
-                            //beatmap.rankedStatus,
-                            //`rank=${beatmap.rankedStatus}`,
-                            //beatmap.userRank !== undefined
-                            //    ? `${beatmap.userRank.rank}`
-                            //    : [],
-                            //beatmap.userRank !== undefined
-                            //    ? `my-rank=${beatmap.userRank.rank}`
-                            //    : [],
-                            elementFilter(beatmap).reduce((_keywords, _beatmap) => {
-                                if (_beatmap.propertyName) {
-                                    _keywords.push(`${_beatmap.propertyName}=`)
-                                    if (_beatmap.type === "number") {
-                                        _keywords.push(`${_beatmap.propertyName}>=`)
-                                        _keywords.push(`${_beatmap.propertyName}<=`)
-                                        _keywords.push(`${_beatmap.propertyName}>`)
-                                        _keywords.push(`${_beatmap.propertyName}<`)
+                            elementFilter(beatmap).reduce(
+                                (_keywords, _beatmap) => {
+                                    if (_beatmap.propertyName) {
+                                        _keywords.push(
+                                            `${_beatmap.propertyName}=`,
+                                        )
+                                        if (
+                                            _beatmap.type === "number" ||
+                                            _beatmap.type === "number-array" ||
+                                            ((_beatmap.type === "string" ||
+                                                _beatmap.type ===
+                                                    "string-array") &&
+                                                _beatmap.stringValueToNumberValueMapper !==
+                                                    undefined)
+                                        ) {
+                                            _keywords.push(
+                                                `${_beatmap.propertyName}>=`,
+                                            )
+                                            _keywords.push(
+                                                `${_beatmap.propertyName}<=`,
+                                            )
+                                            _keywords.push(
+                                                `${_beatmap.propertyName}>`,
+                                            )
+                                            _keywords.push(
+                                                `${_beatmap.propertyName}<`,
+                                            )
+                                            _keywords.push(
+                                                `${_beatmap.propertyName}<=>`,
+                                            )
+                                        }
                                     }
-                                }
-                                if (_beatmap.stringValue) {
-                                    _keywords.push(_beatmap.stringValue.replace(/ /g, "+"))
-                                    _keywords.push(..._beatmap.stringValue.split(/ /g))
-                                }
-                                // TODO Integrate string arrays into the filter algorithm
-                                //      and then uncomment the following:
-                                //if (_beatmap.stringArrayValue) {
-                                //    _keywords.push(..._beatmap.stringArrayValue)
-                                //}
-                                // Integrating numbers doesn't add any value
-                                //if (_beatmap.numberValue) {
-                                //    _keywords.push(`${_beatmap.numberValue}`)
-                                //}
-                                return _keywords
-                            }, [] as string[])
+                                    if (_beatmap.stringValue) {
+                                        _keywords.push(
+                                            _beatmap.stringValue.replace(
+                                                / /g,
+                                                "+",
+                                            ),
+                                        )
+                                        _keywords.push(
+                                            ..._beatmap.stringValue.split(/ /g),
+                                        )
+                                    }
+                                    if (_beatmap.stringArrayValue) {
+                                        _keywords.push(
+                                            ..._beatmap.stringArrayValue.map(
+                                                (a) => a.replace(/ /g, "+"),
+                                            ),
+                                        )
+                                        _keywords.push(
+                                            ..._beatmap.stringArrayValue.reduce(
+                                                (prev, curr) =>
+                                                    prev.concat(
+                                                        curr.split(/ /g),
+                                                    ),
+                                                [],
+                                            ),
+                                        )
+                                    }
+                                    // Integrating numbers as auto completion doesn't add any value
+                                    //if (_beatmap.numberValue) {
+                                    //    _keywords.push(`${_beatmap.numberValue}`)
+                                    //}
+                                    return _keywords
+                                },
+                                [] as string[],
+                            ),
                         )
                     }, [] as string[])
                     .map((keyword) => keyword.trim().toLowerCase()),

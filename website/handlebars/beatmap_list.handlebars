@@ -6,23 +6,33 @@
                         href="https://osu.ppy.sh/beatmapsets/{{this.setId}}#{{this.mode}}/{{this.id}}"
                     >{{this.title}} - {{this.artist}}</a></div>
                 <div class="beatmap-category"><a
-                        href="https://osu.ppy.sh/users/{{this.creatorId}}">made by {{this.creator}}</a></div>
+                        href="https://osu.ppy.sh/users/{{this.creatorId}}"
+                    >made by {{this.creator}}</a></div>
                 <div class="beatmap-description">{{this.rankedStatus}}
-                    ({{this.stats.difficultyRating}}*, {{this.stats.bpm}} bpm) -
+                    ({{this.stats.difficultyRating}}*,
+                    {{this.stats.bpm}}
+                    bpm) -
                     {{this.stats.version}}</div>
                 <div class="beatmap-setup">Stats:
-                    {{convertSecsToMinsWithSecs this.stats.lengthInSeconds}} min
-                    {{this.stats.maxCombo}}x
-                    AR {{this.stats.ar}}  CS {{this.stats.cs}}
+                    {{convertSecsToMinsWithSecs this.stats.lengthInSeconds}}
+                    min
+                    {{this.stats.maxCombo}}x AR
+                    {{this.stats.ar}}
+                    CS
+                    {{this.stats.cs}}
                 </div>
                 {{#if this.userRank}}
                     <div class="beatmap-bugs">
-                        <a href="https://osu.ppy.sh/scores/osu/{{this.userRank.id}}">
+                        <a
+                            href="https://osu.ppy.sh/scores/osu/{{this.userRank.id}}"
+                        >
                             Achieved rank:
                             {{this.userRank.rank}}
                             {{renderStringArray this.userRank.mods}}
                             {{convertToPercent this.userRank.accuracy}}%
-                            {{#if this.userRank.pp}}{{convertToNormalPp this.userRank.pp}}pp{{/if}}
+                            {{#if this.userRank.pp}}{{convertToNormalPp
+                                    this.userRank.pp
+                                }}pp{{/if}}
                             {{this.userRank.maxCombo}}/{{this.stats.maxCombo}}
                             ({{this.userRank.counts.x300}}/{{this.userRank.counts.x100}}/{{this.userRank.counts.x50}}/{{this.userRank.counts.miss}})
                         </a>
@@ -31,7 +41,13 @@
                 <div class="beatmap-tags">
                     <ul>
                         <li class="beatmap-tag beatmap-tag-youtube">
-                            <a href="https://www.youtube.com/results?search_query={{encodeStringToUrlParameter this.title this.artist}}" target="_blank">
+                            <a
+                                href="https://www.youtube.com/results?search_query={{encodeStringToUrlParameter
+                                    this.title
+                                    this.artist
+                                }}"
+                                target="_blank"
+                            >
                                 Find on YouTube
                             </a>
                         </li>

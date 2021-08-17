@@ -108,8 +108,10 @@ const getBeatmapInformation = async (
                   .filter((a) => a !== "")
             : []
     if (options !== undefined && options.filterOsuTags !== undefined) {
-        const filterOsuTags = options.filterOsuTags?.map(a => a.toLowerCase())
-        osuTags = osuTags.filter(osuTag => !filterOsuTags?.includes(osuTag.toLowerCase()))
+        const filterOsuTags = options.filterOsuTags?.map((a) => a.toLowerCase())
+        osuTags = osuTags.filter(
+            (osuTag) => !filterOsuTags?.includes(osuTag.toLowerCase()),
+        )
     }
     const favoriteBeatmapInformation: FavoriteBeatmapInformation = {
         artist: beatmapInfo.beatmapset.artist_unicode,
@@ -201,8 +203,8 @@ export interface FavoriteBeatmapsData {
             favoriteBeatmap.customTags,
             GameMode.osu,
             {
-                filterOsuTags: favoriteBeatmaps.tagFilterList
-            }
+                filterOsuTags: favoriteBeatmaps.tagFilterList,
+            },
         )
         favoriteBeatmapsCompiledArray.push(favoriteBeatmapInfo)
     }

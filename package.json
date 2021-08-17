@@ -16,12 +16,12 @@
     "license": "ISC",
     "dependencies": {
         "osu-api-v2": "^0.0.6",
-        "simple-generic-object-array-search-bar-filter": "^0.0.4"
+        "simple-generic-object-array-search-bar-filter": "^0.0.5"
     },
     "devDependencies": {
         "@types/node": "^16.6.1",
-        "@typescript-eslint/eslint-plugin": "^4.29.1",
-        "@typescript-eslint/parser": "^4.29.1",
+        "@typescript-eslint/eslint-plugin": "^4.29.2",
+        "@typescript-eslint/parser": "^4.29.2",
         "escape-string-regexp": "^5.0.0",
         "eslint": "^7.32.0",
         "eslint-config-prettier": "^8.3.0",
@@ -33,6 +33,6 @@
         "ts-loader": "^9.2.5",
         "typescript": "^4.3.5",
         "webpack": "^5.50.0",
-        "webpack-cli": "^4.7.2"
+        "webpack-cli": "^4.8.0"
     }
 }

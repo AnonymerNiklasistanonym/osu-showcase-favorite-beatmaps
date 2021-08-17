@@ -10,11 +10,19 @@ Handlebars.registerHelper("isString", function (arg, options) {
 Handlebars.registerHelper("isArray", function (arg, options) {
     return Array.isArray(arg) ? options.fn(this) : options.inverse(this)
 })
-Handlebars.registerHelper("encodeStringToUrlParameter", (title: string, artist: string) => {
-    if (Handlebars.Utils.toString(title) && Handlebars.Utils.toString(artist)) {
-        return encodeURIComponent(title + " by " + artist).replace(/ /g, "+").replace(/%20/g, "+")
-    }
-})
+Handlebars.registerHelper(
+    "encodeStringToUrlParameter",
+    (title: string, artist: string) => {
+        if (
+            Handlebars.Utils.toString(title) &&
+            Handlebars.Utils.toString(artist)
+        ) {
+            return encodeURIComponent(title + " by " + artist)
+                .replace(/ /g, "+")
+                .replace(/%20/g, "+")
+        }
+    },
+)
 Handlebars.registerHelper("convertToPercent", (percentNumber: number) => {
     if (typeof percentNumber === "number") {
         return (percentNumber * 100).toFixed(2)
