@@ -4,6 +4,7 @@
     --color-positive: #40c900;
     --color-youtube: #ff0000;
     --color-preview: #bb00c2;
+    --color-osu-direct: #3986ac;
 
     --color-neutral-base: #ffffff;
     --color-neutral-base-second: #f1f1f1;
@@ -64,6 +65,7 @@
     --beatmap-tag-color-positive: var(--color-neutral-base-contrast);
     --beatmap-tag-color-youtube: var(--color-youtube);
     --beatmap-tag-color-preview: var(--color-preview);
+    --beatmap-tag-color-osu-direct: var(--color-osu-direct);
 }
 
 body {
@@ -457,6 +459,18 @@ section#beatmap-list
     > ul
     > li.beatmap-tag-youtube {
     background-color: var(--beatmap-tag-color-youtube);
+    color: var(--beatmap-tag-color);
+}
+
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item
+    > div.beatmap-container
+    > div.beatmap-tags
+    > ul
+    > li.beatmap-tag-osu-direct {
+    background-color: var(--beatmap-tag-color-osu-direct);
     color: var(--beatmap-tag-color);
 }
 

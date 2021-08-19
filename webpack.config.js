@@ -1,8 +1,9 @@
 const path = require("path");
 const fs = require("fs");
 
-const distDir = path.join(__dirname, "dist", "website")
-const websiteDir = path.join(__dirname, "website")
+const projectDir = path.resolve(__dirname)
+const distDir = path.join(projectDir, "dist", "website")
+const websiteDir = path.join(projectDir, "website")
 const filesToCopy = [
     {
         from: path.join(websiteDir, "index.html"),
@@ -17,7 +18,7 @@ const filesToCopy = [
         to: path.join(distDir, "favicon.svg"),
     },
     {
-        from: path.join(__dirname, "compiled_beatmaps.json"),
+        from: path.join(projectDir, "compiled_beatmaps.json"),
         to: path.join(distDir, "favorite_beatmaps.json"),
     },
 ]
@@ -44,8 +45,8 @@ module.exports = {
                         loader: "ts-loader",
                         options: {
                             configFile: path.join(
-                              __dirname,
-                              "tsconfig.webpack.json",
+                                projectDir,
+                                "tsconfig.webpack.json",
                             ),
                         },
                     },
