@@ -26,7 +26,11 @@ const filesToCopy = [
 // Copy resources to the dist directory
 fs.mkdirSync(distDir, { recursive: true })
 for (const fileToCopy of filesToCopy) {
-    fs.copyFileSync(fileToCopy.from, fileToCopy.to)
+    if (fs.existsSync(fileToCopy.from)) {
+        fs.copyFileSync(fileToCopy.from, fileToCopy.to)
+    } else {
+        console.warn(`[warning] File to copy not found: '${fileToCopy.from}'`)
+    }
 }
 
 module.exports = {
