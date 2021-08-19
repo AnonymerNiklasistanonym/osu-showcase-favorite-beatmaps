@@ -19,6 +19,9 @@ try {
         console.debug(jsonData)
     }
 
+    // Set website title
+    document.title = jsonData.title
+    // Create beatmap entries list
     const beatmapList = document.getElementById("beatmap-list")
     const beatmapListElement = createBeatmapList(jsonData.favoriteBeatmaps)
     beatmapList.removeChild(beatmapList.querySelector("div.loading"))
@@ -30,6 +33,7 @@ try {
         const previewButton = htmlElement.querySelector(
             `div.beatmap-tags li.beatmap-tag-preview`,
         )
+        // Add a beatmap preview button
         previewButton.addEventListener("click", () => {
             // Check if an iframe already exists:
             const iframeClassName = "beatmap-preview"
