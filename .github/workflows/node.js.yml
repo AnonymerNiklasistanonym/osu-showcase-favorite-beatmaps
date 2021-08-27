@@ -41,6 +41,11 @@ jobs:
     # Build the osu beatmap information fetcher
     - name: Compile Typescript beatmap fetcher
       run: npm run build
+    - name: Create compiled_beatmaps.json
+      run: npm run start
+      env:
+        OSU_OAUTH_CLIENT_ID: ${{ secrets.OSU_OAUTH_CLIENT_ID }}
+        OSU_OAUTH_CLIENT_SECRET: ${{ secrets.OSU_OAUTH_CLIENT_SECRET }}
     - name: Create website (1/2 handlebars)
       run: npm run handlebars
     - name: Create website (2/2 webpack)
@@ -50,3 +55,29 @@ jobs:
       run: npm run lint
     - name: Check code for formatting errors
       run: npm run format
+    - name: Temporarily save created "website" files
+      uses: actions/upload-artifact@v2
+      with:
+        name: website-artifacts
+        path: ./dist/website
+        retention-days: 7
+
+  deploy:
+    needs:
+    - build
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Retrieve temporarily saved "website" files from the build job
+      uses: actions/download-artifact@v2
+      with:
+        name: website-artifacts
+        path: ./bin
+    - name: Deploy to GitHub Pages
+      uses: crazy-max/ghaction-github-pages@v2
+      with:
+        target_branch: gh-pages
+        build_dir: ./bin
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
