@@ -1,0 +1,513 @@
+:root {
+    --color-accent: #1e8fff;
+    --color-attention: #fbab00;
+    --color-positive: #40c900;
+    --color-youtube: #ff0000;
+    --color-preview: #bb00c2;
+    --color-osu-direct: #3986ac;
+
+    --color-neutral-base: #ffffff;
+    --color-neutral-base-second: #f1f1f1;
+    --color-neutral-base-third: #b3b3b3;
+    --color-neutral-base-border: #616161;
+    --color-neutral-base-contrast: #000000;
+
+    --font-family: Helvetica;
+    --font-size: 1em;
+    --line-height: 1.25em;
+
+    --content-max-width: 1000px;
+
+    --grid-columns: 1fr 1fr;
+}
+
+/* Light mode */
+@media (prefers-color-scheme: light) {
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-neutral-base: #000000;
+        --color-neutral-base-second: #181818;
+        --color-neutral-base-third: #2b2b2b;
+        --color-neutral-base-border: #555555;
+        --color-neutral-base-contrast: #ffffff;
+    }
+}
+
+/* Smaller screen mode */
+@media only screen and (max-width: 700px) {
+    :root {
+        --grid-columns: 1fr;
+    }
+}
+
+:root {
+    --bg-color: var(--color-neutral-base);
+    --text-color: var(--color-neutral-base-contrast);
+
+    --list-element-border-color: var(--color-neutral-base-border);
+
+    --filter-text-autocomplete-border: var(--color-neutral-base-third);
+    --filter-text-autocomplete-bg: var(--color-neutral-base);
+    --filter-text-autocomplete-bg-hover: var(--color-neutral-base-second);
+    --filter-text-autocomplete-bg-select: var(--color-accent);
+    --filter-text-input-bg: var(--color-neutral-base-second);
+    --filter-text-autocomplete-hover: var(--color-neutral-base-contrast);
+    --filter-text-autocomplete-select: var(--color-neutral-base-contrast);
+
+    --beatmap-tag-bg-color: var(--color-neutral-base-second);
+    --beatmap-tag-color: var(--color-neutral-base-contrast);
+    --beatmap-tag-bg-color-attention: var(--color-attention);
+    --beatmap-tag-color-attention: var(--color-neutral-base-contrast);
+    --beatmap-tag-bg-color-positive: var(--color-positive);
+    --beatmap-tag-color-positive: var(--color-neutral-base-contrast);
+    --beatmap-tag-color-youtube: var(--color-youtube);
+    --beatmap-tag-color-preview: var(--color-preview);
+    --beatmap-tag-color-osu-direct: var(--color-osu-direct);
+}
+
+body {
+    /* Set a background color */
+    background-color: var(--bg-color);
+
+    /* Set font properties */
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    color: var(--text-color);
+
+    /* Remove all padding and margins */
+    padding: 0;
+    margin: 0;
+
+    /* Center the content with a max-width */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--content-max-width);
+}
+
+*:focus {
+    /* Remove all outlines (don't forget to implement a custom outline function for accessibility!) */
+    outline: none;
+}
+
+section {
+    /* Remove all padding and margins */
+    padding: 0;
+    margin: 0;
+
+    /* Add a bottom margin */
+    margin-bottom: 1em;
+}
+
+div.filter-text-grid {
+    display: grid;
+    width: 100%;
+    grid-template:
+        "filter-text-input"
+        "filter-text-input-autocomplete-list";
+    grid-column-gap: 1em;
+    grid-row-gap: 0;
+    align-items: center;
+    position: relative;
+}
+
+/* Grid area elements */
+#filter-text-input {
+    grid-area: filter-text-input;
+}
+
+#filter-text-input-autocomplete-list {
+    grid-area: filter-text-input-autocomplete-list;
+
+    /* Add a shadow for the autocomplete overlay */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px 20px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px 0 5px;
+}
+
+div.autocomplete-element-container {
+    overflow-wrap: break-word;
+    border: none !important;
+    background-color: transparent !important;
+}
+
+/* Based on https://www.w3schools.com/howto/howto_js_autocomplete.asp */
+
+input {
+    border: 1px solid transparent;
+    background-color: var(--filter-text-input-bg);
+    color: var(--text-color);
+    padding: 10px;
+    width: calc(100% - 20px);
+    font-size: 16px;
+}
+
+.autocomplete-items {
+    position: absolute;
+    border: 1px solid var(--filter-text-autocomplete-border);
+    border-bottom: none;
+    /* border-top: none; */
+    z-index: 99;
+    /*position the autocomplete items to be the same width as the container:*/
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+
+.autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: var(--filter-text-autocomplete-bg);
+    border-bottom: 1px solid var(--filter-text-autocomplete-border);
+}
+
+.autocomplete-items div:hover {
+    /*when hovering an item:*/
+    background-color: var(--filter-text-autocomplete-bg-hover);
+    color: var(--filter-text-autocomplete-hover);
+}
+
+.autocomplete-active {
+    /*when navigating through the items using the arrow keys:*/
+    background-color: var(--filter-text-autocomplete-bg-select) !important;
+    color: var(--filter-text-autocomplete-select);
+}
+
+section#beatmap-list > div.beatmap-grid-container {
+    padding: 0;
+    margin: 0;
+}
+
+section#beatmap-list > div.beatmap-grid-container > div.beatmap-grid {
+    padding: 0;
+    margin: 0;
+
+    display: grid;
+    grid-template-columns: var(--grid-columns);
+}
+
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item {
+    margin: 0.5em;
+    padding: 0;
+
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+
+    /*border: var(--list-element-border-color) 1px solid;*/
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    border-radius: 5px;
+}
+
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item.show {
+    display: block;
+}
+
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item.hide {
+    display: none;
+}
+
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item
+    > div.beatmap-background-image {
+    margin: 0;
+    padding: 0;
+
+    background-size: cover;
+    background-position: center;
+
+    height: 11em;
+
+    border-radius: 5px 5px 0 0;
+}
+
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item
+    > iframe.beatmap-preview {
+    border: none;
+    background-color: var(--bg-color);
+    margin: 0;
+    margin-bottom: -7px;
+    padding: 0;
+    border-radius: 0 0 5px 5px;
+}
+
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item
+    > div.beatmap-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 0.5em;
+    grid-row-gap: 0.5em;
+
+    margin: 1em;
+}
+
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item
+    > div.beatmap-container
+    > div.beatmap-name {
+    grid-column: 1 / span 4;
+}
+
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item
+    > div.beatmap-container
+    > div.beatmap-name
+    > a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item
+    > div.beatmap-container
+    > div.beatmap-name
+    > a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item
+    > div.beatmap-container
+    > div.beatmap-name
+    > a.beatmap-title-artist {
+    font-weight: bold;
+}
+
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item
+    > div.beatmap-container
+    > div.beatmap-name
+    > a.beatmap-creator {
+    font-weight: lighter;
+    font-style: italic;
+}
+
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item
+    > div.beatmap-container
+    > div.beatmap-category {
+    grid-column: 3 / span 2;
+    font-weight: bolder;
+}
+
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item
+    > div.beatmap-container
+    > div.beatmap-description {
+    grid-column: 1 / span 4;
+    font-weight: normal;
+}
+
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item
+    > div.beatmap-container
+    > div.beatmap-setup {
+    grid-column: 1 / span 4;
+    font-weight: lighter;
+}
+
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item
+    > div.beatmap-container
+    > div.beatmap-bugs {
+    grid-column: 1 / span 4;
+    font-weight: lighter;
+}
+
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item
+    > div.beatmap-container
+    > div.beatmap-tags {
+    grid-column: 1 / span 4;
+    padding: 00;
+}
+
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item
+    > div.beatmap-container
+    > div.beatmap-tags
+    > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item
+    > div.beatmap-container
+    > div.beatmap-tags
+    > ul
+    > li.beatmap-tag {
+    display: inline-block;
+    border-radius: 0.5em;
+    margin: 0.25em;
+    padding: 0.5em;
+    background-color: var(--beatmap-tag-bg-color);
+    color: var(--beatmap-tag-color);
+    font-size: calc(var(--font-size) * 5 / 6);
+}
+
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item
+    > div.beatmap-container
+    > div.beatmap-category
+    > a {
+    text-decoration: none;
+    color: var(--beatmap-tag-color);
+}
+
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item
+    > div.beatmap-container
+    > div.beatmap-tags
+    > ul
+    > li.beatmap-tag
+    > a {
+    text-decoration: none;
+    color: var(--beatmap-tag-color);
+}
+
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item
+    > div.beatmap-container
+    > div.beatmap-bugs
+    > a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item
+    > div.beatmap-container
+    > div.beatmap-tags
+    > ul
+    > li.beatmap-tag-attention {
+    background-color: var(--beatmap-tag-bg-color-attention);
+    color: var(--beatmap-tag-color-attention);
+}
+
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item
+    > div.beatmap-container
+    > div.beatmap-tags
+    > ul
+    > li.beatmap-tag-positive {
+    background-color: var(--beatmap-tag-bg-color-positive);
+    color: var(--beatmap-tag-color-positive);
+}
+
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item
+    > div.beatmap-container
+    > div.beatmap-tags
+    > ul
+    > li.beatmap-tag-youtube {
+    background-color: var(--beatmap-tag-color-youtube);
+    color: var(--beatmap-tag-color);
+}
+
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item
+    > div.beatmap-container
+    > div.beatmap-tags
+    > ul
+    > li.beatmap-tag-osu-direct {
+    background-color: var(--beatmap-tag-color-osu-direct);
+    color: var(--beatmap-tag-color);
+}
+
+section#beatmap-list
+    > div.beatmap-grid-container
+    > div.beatmap-grid
+    > div.beatmap-grid-item
+    > div.beatmap-container
+    > div.beatmap-tags
+    > ul
+    > li.beatmap-tag-preview {
+    background-color: var(--beatmap-tag-color-preview);
+    color: var(--beatmap-tag-color);
+    cursor: pointer;
+}
+
+div.loading {
+    margin: 1em;
+    width: 100%;
+    text-align: center;
+}
+
+div.loading > span.blinkin-point::after {
+    animation: blinker 1s linear infinite;
+    content: ".";
+}
+
+div.loading > span.blinkin-point.delay0-3s::after {
+    animation-delay: 0.3s;
+}
+
+div.loading > span.blinkin-point.delay0-6s::after {
+    animation-delay: 0.6s;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}

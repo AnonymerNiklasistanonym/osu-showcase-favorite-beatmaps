@@ -1,0 +1,2200 @@
+{
+    "createdAt": "2021-08-27T01:11:53.566Z",
+    "favoriteBeatmaps": [
+        {
+            "artist": "RADWIMPS",
+            "audioPreviewUrl": "//b.ppy.sh/preview/515939.mp3",
+            "creator": "Monstrata",
+            "creatorId": 2706438,
+            "customTags": [
+                "fun",
+                "first-100pp",
+                "difficult-end-jump"
+            ],
+            "id": 1095534,
+            "imageUrl": "https://assets.ppy.sh/beatmaps/515939/covers/card@2x.jpg?1622109545",
+            "mode": "osu",
+            "osuTags": [
+                "mitsuha",
+                "taki",
+                "nandemonaiya"
+            ],
+            "rankedStatus": "ranked",
+            "setId": 515939,
+            "stats": {
+                "accuracy": 7.5,
+                "ar": 8.7,
+                "bpm": 84,
+                "cs": 4,
+                "difficultyRating": 4.41,
+                "drain": 5,
+                "lengthInSeconds": 411,
+                "maxCombo": 1510,
+                "version": "Twilight"
+            },
+            "title": "Nandemo Nai ya",
+            "userRank": {
+                "accuracy": 0.9831501831501831,
+                "counts": {
+                    "geki": 213,
+                    "katu": 18,
+                    "miss": 0,
+                    "x50": 0,
+                    "x100": 23,
+                    "x300": 887
+                },
+                "createdAt": "2021-03-27T22:59:43+00:00",
+                "id": 3560315968,
+                "maxCombo": 1510,
+                "mods": [],
+                "perfect": true,
+                "pp": 99.4784,
+                "rank": "S",
+                "score": 33651586
+            }
+        },
+        {
+            "artist": "Pendulum",
+            "audioPreviewUrl": "//b.ppy.sh/preview/34256.mp3",
+            "creator": "Zapy",
+            "creatorId": 251395,
+            "customTags": [
+                "fun",
+                "good-song",
+                "banger"
+            ],
+            "id": 112385,
+            "imageUrl": "https://assets.ppy.sh/beatmaps/34256/covers/card@2x.jpg?1622048848",
+            "mode": "osu",
+            "osuTags": [],
+            "rankedStatus": "loved",
+            "setId": 34256,
+            "stats": {
+                "accuracy": 4,
+                "ar": 8,
+                "bpm": 176,
+                "cs": 4,
+                "difficultyRating": 3.84,
+                "drain": 5,
+                "lengthInSeconds": 264,
+                "maxCombo": 673,
+                "version": "Hard"
+            },
+            "title": "Blood Sugar",
+            "userRank": {
+                "accuracy": 1,
+                "counts": {
+                    "geki": 70,
+                    "katu": 0,
+                    "miss": 0,
+                    "x50": 0,
+                    "x100": 0,
+                    "x300": 442
+                },
+                "createdAt": "2021-08-11T20:03:50+00:00",
+                "id": 3816003105,
+                "maxCombo": 673,
+                "mods": [],
+                "perfect": true,
+                "pp": null,
+                "rank": "X",
+                "score": 7039262
+            }
+        },
+        {
+            "artist": "LIDA x ФРИК ПАТИ",
+            "audioPreviewUrl": "//b.ppy.sh/preview/1502812.mp3",
+            "creator": "Nuvolina",
+            "creatorId": 10974170,
+            "customTags": [
+                "fun",
+                "good-song",
+                "banger"
+            ],
+            "id": 3086537,
+            "imageUrl": "https://assets.ppy.sh/beatmaps/1502812/covers/card@2x.jpg?1627419328",
+            "mode": "osu",
+            "osuTags": [
+                "russian",
+                "electronic",
+                "Жабы",
+                "атаковали",
+                "планету",
+                "Земля",
+                "pw384"
+            ],
+            "rankedStatus": "ranked",
+            "setId": 1502812,
+            "stats": {
+                "accuracy": 7.3,
+                "ar": 8.7,
+                "bpm": 159,
+                "cs": 3.8,
+                "difficultyRating": 4.49,
+                "drain": 5,
+                "lengthInSeconds": 140,
+                "maxCombo": 515,
+                "version": "384's Insane"
+            },
+            "title": "Emo Hardcore",
+            "userRank": {
+                "accuracy": 0.9927927927927928,
+                "counts": {
+                    "geki": 120,
+                    "katu": 4,
+                    "miss": 0,
+                    "x50": 0,
+                    "x100": 4,
+                    "x300": 366
+                },
+                "createdAt": "2021-08-08T01:40:26+00:00",
+                "id": 3810075249,
+                "maxCombo": 513,
+                "mods": [],
+                "perfect": false,
+                "pp": 111.053,
+                "rank": "S",
+                "score": 4615404
+            }
+        },
+        {
+            "artist": "Station Earth",
+            "audioPreviewUrl": "//b.ppy.sh/preview/371128.mp3",
+            "creator": "Bearizm",
+            "creatorId": 3495259,
+            "customTags": [
+                "fun",
+                "good-song",
+                "first-5*"
+            ],
+            "id": 814293,
+            "imageUrl": "https://assets.ppy.sh/beatmaps/371128/covers/card@2x.jpg?1622095582",
+            "mode": "osu",
+            "osuTags": [
+                "asphyxia",
+                "hootowlstar",
+                "appleeaterx",
+                "dnb",
+                "drum",
+                "bass",
+                "liquid",
+                "liquicity",
+                "galaxy",
+                "dreams"
+            ],
+            "rankedStatus": "ranked",
+            "setId": 371128,
+            "stats": {
+                "accuracy": 8.5,
+                "ar": 9.2,
+                "bpm": 174,
+                "cs": 4,
+                "difficultyRating": 5.17,
+                "drain": 6,
+                "lengthInSeconds": 132,
+                "maxCombo": 562,
+                "version": "Divine"
+            },
+            "title": "Cold Green Eyes ft. Roos Denayer",
+            "userRank": {
+                "accuracy": 0.968013468013468,
+                "counts": {
+                    "geki": 72,
+                    "katu": 12,
+                    "miss": 0,
+                    "x50": 0,
+                    "x100": 19,
+                    "x300": 377
+                },
+                "createdAt": "2021-06-08T15:07:38+00:00",
+                "id": 3708756280,
+                "maxCombo": 561,
+                "mods": [],
+                "perfect": false,
+                "pp": 137.639,
+                "rank": "S",
+                "score": 6297190
+            }
+        },
+        {
+            "artist": "S3RL",
+            "audioPreviewUrl": "//b.ppy.sh/preview/785572.mp3",
+            "creator": "Gero",
+            "creatorId": 1467715,
+            "customTags": [
+                "fun",
+                "good-song",
+                "banger"
+            ],
+            "id": 1649184,
+            "imageUrl": "https://assets.ppy.sh/beatmaps/785572/covers/card@2x.jpg?1622140343",
+            "mode": "osu",
+            "osuTags": [
+                "angels",
+                "chi-chi",
+                "jole",
+                "hughes",
+                "kelly",
+                "boyer",
+                "dance",
+                "happy",
+                "hardcore",
+                "techno",
+                "trance",
+                "mao",
+                "osuplayer111",
+                "andrea",
+                "collab",
+                "collaboration"
+            ],
+            "rankedStatus": "ranked",
+            "setId": 785572,
+            "stats": {
+                "accuracy": 6,
+                "ar": 7.5,
+                "bpm": 175,
+                "cs": 4,
+                "difficultyRating": 3.5,
+                "drain": 6,
+                "lengthInSeconds": 221,
+                "maxCombo": 1105,
+                "version": "Hard"
+            },
+            "title": "I'll See You Again (feat. Chi Chi)",
+            "userRank": {
+                "accuracy": 0.998840579710145,
+                "counts": {
+                    "geki": 138,
+                    "katu": 1,
+                    "miss": 0,
+                    "x50": 0,
+                    "x100": 1,
+                    "x300": 574
+                },
+                "createdAt": "2021-07-28T04:22:14+00:00",
+                "id": 3792133083,
+                "maxCombo": 1105,
+                "mods": [],
+                "perfect": true,
+                "pp": 63.3404,
+                "rank": "S",
+                "score": 15426746
+            }
+        },
+        {
+            "artist": "S3RL",
+            "audioPreviewUrl": "//b.ppy.sh/preview/785572.mp3",
+            "creator": "Gero",
+            "creatorId": 1467715,
+            "customTags": [
+                "fun",
+                "good-song",
+                "banger"
+            ],
+            "id": 1649183,
+            "imageUrl": "https://assets.ppy.sh/beatmaps/785572/covers/card@2x.jpg?1622140343",
+            "mode": "osu",
+            "osuTags": [
+                "angels",
+                "chi-chi",
+                "jole",
+                "hughes",
+                "kelly",
+                "boyer",
+                "dance",
+                "happy",
+                "hardcore",
+                "techno",
+                "trance",
+                "mao",
+                "osuplayer111",
+                "andrea",
+                "collab",
+                "collaboration"
+            ],
+            "rankedStatus": "ranked",
+            "setId": 785572,
+            "stats": {
+                "accuracy": 8,
+                "ar": 9,
+                "bpm": 175,
+                "cs": 4.5,
+                "difficultyRating": 4.46,
+                "drain": 7,
+                "lengthInSeconds": 221,
+                "maxCombo": 1188,
+                "version": "Gerodrea's Eternity Love"
+            },
+            "title": "I'll See You Again (feat. Chi Chi)",
+            "userRank": {
+                "accuracy": 0.9361439842209073,
+                "counts": {
+                    "geki": 75,
+                    "katu": 42,
+                    "miss": 4,
+                    "x50": 3,
+                    "x100": 55,
+                    "x300": 614
+                },
+                "createdAt": "2021-07-20T01:38:58+00:00",
+                "id": 3779224265,
+                "maxCombo": 643,
+                "mods": [],
+                "perfect": false,
+                "pp": 50.5726,
+                "rank": "A",
+                "score": 8464170
+            }
+        },
+        {
+            "artist": "Knife Party & Tom Morello",
+            "audioPreviewUrl": "//b.ppy.sh/preview/727908.mp3",
+            "creator": "Marmowka",
+            "creatorId": 2907237,
+            "customTags": [
+                "fun",
+                "good-song",
+                "banger"
+            ],
+            "id": 1558497,
+            "imageUrl": "https://assets.ppy.sh/beatmaps/727908/covers/card@2x.jpg?1622132872",
+            "mode": "osu",
+            "osuTags": [
+                "dubstep",
+                "cut",
+                "short",
+                "weareriot",
+                "wajinshu",
+                "djulus"
+            ],
+            "rankedStatus": "ranked",
+            "setId": 727908,
+            "stats": {
+                "accuracy": 8,
+                "ar": 9,
+                "bpm": 174,
+                "cs": 4,
+                "difficultyRating": 4.66,
+                "drain": 6,
+                "lengthInSeconds": 121,
+                "maxCombo": 696,
+                "version": "Insane"
+            },
+            "title": "Battle Sirens (RIOT Remix)",
+            "userRank": {
+                "accuracy": 0.9762435040831478,
+                "counts": {
+                    "geki": 66,
+                    "katu": 9,
+                    "miss": 0,
+                    "x50": 0,
+                    "x100": 16,
+                    "x300": 433
+                },
+                "createdAt": "2021-07-09T12:44:22+00:00",
+                "id": 3761244134,
+                "maxCombo": 603,
+                "mods": [],
+                "perfect": false,
+                "pp": 105.33,
+                "rank": "S",
+                "score": 5706300
+            }
+        },
+        {
+            "artist": "真理絵",
+            "audioPreviewUrl": "//b.ppy.sh/preview/878833.mp3",
+            "creator": "Lasse",
+            "creatorId": 896613,
+            "customTags": [
+                "fun",
+                "good-song",
+                "banger"
+            ],
+            "id": 1839949,
+            "imageUrl": "https://assets.ppy.sh/beatmaps/878833/covers/card@2x.jpg?1622150751",
+            "mode": "osu",
+            "osuTags": [
+                "butterfly",
+                "seeker",
+                "eroge",
+                "visual",
+                "novel",
+                "silkyplus",
+                "opening",
+                "drumstep",
+                "dnb",
+                "drum",
+                "bass"
+            ],
+            "rankedStatus": "ranked",
+            "setId": 878833,
+            "stats": {
+                "accuracy": 6.8,
+                "ar": 8,
+                "bpm": 178,
+                "cs": 4,
+                "difficultyRating": 3.64,
+                "drain": 5.4,
+                "lengthInSeconds": 217,
+                "maxCombo": 904,
+                "version": "Hard"
+            },
+            "title": "Shiroki Yami no Arabesque (Soleily Remix)",
+            "userRank": {
+                "accuracy": 0.9944328462073765,
+                "counts": {
+                    "geki": 146,
+                    "katu": 4,
+                    "miss": 0,
+                    "x50": 0,
+                    "x100": 4,
+                    "x300": 475
+                },
+                "createdAt": "2021-07-02T12:25:51+00:00",
+                "id": 3749638870,
+                "maxCombo": 903,
+                "mods": [],
+                "perfect": false,
+                "pp": 64.5505,
+                "rank": "S",
+                "score": 11069360
+            }
+        },
+        {
+            "artist": "オヌミ",
+            "audioPreviewUrl": "//b.ppy.sh/preview/1392711.mp3",
+            "creator": "Lunicia",
+            "creatorId": 4369309,
+            "customTags": [
+                "fun",
+                "good-song",
+                "banger"
+            ],
+            "id": 2876949,
+            "imageUrl": "https://assets.ppy.sh/beatmaps/1392711/covers/card@2x.jpg?1622207749",
+            "mode": "osu",
+            "osuTags": [
+                "instrumental",
+                "electronic",
+                "jasontime12345"
+            ],
+            "rankedStatus": "ranked",
+            "setId": 1392711,
+            "stats": {
+                "accuracy": 7,
+                "ar": 8,
+                "bpm": 200,
+                "cs": 3.5,
+                "difficultyRating": 3.31,
+                "drain": 4.5,
+                "lengthInSeconds": 171,
+                "maxCombo": 591,
+                "version": "Collab Hard"
+            },
+            "title": "LIBIDO",
+            "userRank": {
+                "accuracy": 0.9647239263803681,
+                "counts": {
+                    "geki": 112,
+                    "katu": 13,
+                    "miss": 0,
+                    "x50": 1,
+                    "x100": 16,
+                    "x300": 309
+                },
+                "createdAt": "2021-04-30T08:51:37+00:00",
+                "id": 3631100426,
+                "maxCombo": 587,
+                "mods": [
+                    "HD"
+                ],
+                "perfect": false,
+                "pp": 39.4219,
+                "rank": "SH",
+                "score": 4881606
+            }
+        },
+        {
+            "artist": "オヌミ",
+            "audioPreviewUrl": "//b.ppy.sh/preview/1392711.mp3",
+            "creator": "Lunicia",
+            "creatorId": 4369309,
+            "customTags": [
+                "fun",
+                "good-song",
+                "banger"
+            ],
+            "id": 2879095,
+            "imageUrl": "https://assets.ppy.sh/beatmaps/1392711/covers/card@2x.jpg?1622207749",
+            "mode": "osu",
+            "osuTags": [
+                "instrumental",
+                "electronic",
+                "jasontime12345"
+            ],
+            "rankedStatus": "ranked",
+            "setId": 1392711,
+            "stats": {
+                "accuracy": 4,
+                "ar": 5.5,
+                "bpm": 200,
+                "cs": 3,
+                "difficultyRating": 2.36,
+                "drain": 4,
+                "lengthInSeconds": 168,
+                "maxCombo": 424,
+                "version": "Normal"
+            },
+            "title": "LIBIDO",
+            "userRank": {
+                "accuracy": 0.9693165969316597,
+                "counts": {
+                    "geki": 56,
+                    "katu": 8,
+                    "miss": 0,
+                    "x50": 0,
+                    "x100": 11,
+                    "x300": 228
+                },
+                "createdAt": "2021-07-22T08:07:13+00:00",
+                "id": 3782891724,
+                "maxCombo": 422,
+                "mods": [
+                    "HD",
+                    "HR",
+                    "NC",
+                    "SD"
+                ],
+                "perfect": false,
+                "pp": 46.1326,
+                "rank": "SH",
+                "score": 2357270
+            }
+        },
+        {
+            "artist": "ナユタン星人",
+            "audioPreviewUrl": "//b.ppy.sh/preview/651399.mp3",
+            "creator": "Awlex",
+            "creatorId": 5423774,
+            "customTags": [
+                "fun",
+                "good-song"
+            ],
+            "id": 1439682,
+            "imageUrl": "https://assets.ppy.sh/beatmaps/651399/covers/card@2x.jpg?1622123016",
+            "mode": "osu",
+            "osuTags": [],
+            "rankedStatus": "loved",
+            "setId": 651399,
+            "stats": {
+                "accuracy": 7,
+                "ar": 9,
+                "bpm": 152,
+                "cs": 3.5,
+                "difficultyRating": 3.61,
+                "drain": 5,
+                "lengthInSeconds": 179,
+                "maxCombo": 696,
+                "version": "Hard"
+            },
+            "title": "Alien Alien (Nhato Remix)",
+            "userRank": {
+                "accuracy": 0.939033189033189,
+                "counts": {
+                    "geki": 52,
+                    "katu": 22,
+                    "miss": 0,
+                    "x50": 1,
+                    "x100": 41,
+                    "x300": 420
+                },
+                "createdAt": "2021-04-23T02:29:29+00:00",
+                "id": 3616027165,
+                "maxCombo": 696,
+                "mods": [],
+                "perfect": true,
+                "pp": null,
+                "rank": "S",
+                "score": 7553406
+            }
+        },
+        {
+            "artist": "Hyper Potions",
+            "audioPreviewUrl": "//b.ppy.sh/preview/735903.mp3",
+            "creator": "-Harpuia-",
+            "creatorId": 5179950,
+            "customTags": [
+                "fun",
+                "good-song"
+            ],
+            "id": 1611502,
+            "imageUrl": "https://assets.ppy.sh/beatmaps/735903/covers/card@2x.jpg?1622133989",
+            "mode": "osu",
+            "osuTags": [
+                "ソニック",
+                "マニア",
+                "sega",
+                "pre-order",
+                "trailer",
+                "theme",
+                "ハイパー",
+                "ポションズ",
+                "anneasparagus",
+                "ratina0",
+                "kaitjuh",
+                "_kotachi_"
+            ],
+            "rankedStatus": "ranked",
+            "setId": 735903,
+            "stats": {
+                "accuracy": 7,
+                "ar": 8.8,
+                "bpm": 175,
+                "cs": 3.8,
+                "difficultyRating": 4.31,
+                "drain": 6,
+                "lengthInSeconds": 74,
+                "maxCombo": 391,
+                "version": "kotachi's Insane"
+            },
+            "title": "Time Trials",
+            "userRank": {
+                "accuracy": 0.959349593495935,
+                "counts": {
+                    "geki": 58,
+                    "katu": 10,
+                    "miss": 0,
+                    "x50": 0,
+                    "x100": 15,
+                    "x300": 231
+                },
+                "createdAt": "2021-05-28T00:43:39+00:00",
+                "id": 3687048615,
+                "maxCombo": 391,
+                "mods": [],
+                "perfect": true,
+                "pp": 70.6939,
+                "rank": "S",
+                "score": 2296514
+            }
+        },
+        {
+            "artist": "AViVA",
+            "audioPreviewUrl": "//b.ppy.sh/preview/1327305.mp3",
+            "creator": "ToxYuu",
+            "creatorId": 9239371,
+            "customTags": [
+                "fun",
+                "good-song"
+            ],
+            "id": 2753570,
+            "imageUrl": "https://assets.ppy.sh/beatmaps/1327305/covers/card@2x.jpg?1613732425",
+            "mode": "osu",
+            "osuTags": [
+                "xkito",
+                "hatsunemiku",
+                "cursed",
+                "aviva",
+                "trap",
+                "deep",
+                "sad"
+            ],
+            "rankedStatus": "graveyard",
+            "setId": 1327305,
+            "stats": {
+                "accuracy": 6.7,
+                "ar": 7.7,
+                "bpm": 165,
+                "cs": 3.5,
+                "difficultyRating": 3.62,
+                "drain": 4,
+                "lengthInSeconds": 156,
+                "maxCombo": 557,
+                "version": "Ferexis' Hard"
+            },
+            "title": "CURSED"
+        },
+        {
+            "artist": "Егор Натс",
+            "audioPreviewUrl": "//b.ppy.sh/preview/745388.mp3",
+            "creator": "XenjeS",
+            "creatorId": 10166905,
+            "customTags": [
+                "fun",
+                "good-song"
+            ],
+            "id": 1571507,
+            "imageUrl": "https://assets.ppy.sh/beatmaps/745388/covers/card@2x.jpg?1622135422",
+            "mode": "osu",
+            "osuTags": [
+                "dima21",
+                "tmacboris",
+                "edgar456"
+            ],
+            "rankedStatus": "loved",
+            "setId": 745388,
+            "stats": {
+                "accuracy": 7,
+                "ar": 9,
+                "bpm": 159.88,
+                "cs": 3.5,
+                "difficultyRating": 4.29,
+                "drain": 6,
+                "lengthInSeconds": 133,
+                "maxCombo": 528,
+                "version": "edgar's Insane"
+            },
+            "title": "Ya zhenyus' na devochke iz anime",
+            "userRank": {
+                "accuracy": 0.9820700896495518,
+                "counts": {
+                    "geki": 130,
+                    "katu": 9,
+                    "miss": 0,
+                    "x50": 0,
+                    "x100": 11,
+                    "x300": 398
+                },
+                "createdAt": "2021-08-04T04:29:03+00:00",
+                "id": 3803661542,
+                "maxCombo": 528,
+                "mods": [],
+                "perfect": true,
+                "pp": null,
+                "rank": "S",
+                "score": 5161340
+            }
+        },
+        {
+            "artist": "Fox Stevenson & Curbi",
+            "audioPreviewUrl": "//b.ppy.sh/preview/613961.mp3",
+            "creator": "Yamicchi",
+            "creatorId": 6486831,
+            "customTags": [
+                "fun",
+                "good-song"
+            ],
+            "id": 1295250,
+            "imageUrl": "https://assets.ppy.sh/beatmaps/613961/covers/card@2x.jpg?1622119200",
+            "mode": "osu",
+            "osuTags": [
+                "dnb",
+                "drum",
+                "bass",
+                "cut",
+                "asaiga",
+                "hikan",
+                "plaudible"
+            ],
+            "rankedStatus": "ranked",
+            "setId": 613961,
+            "stats": {
+                "accuracy": 8,
+                "ar": 9,
+                "bpm": 174,
+                "cs": 3.8,
+                "difficultyRating": 4.38,
+                "drain": 5.5,
+                "lengthInSeconds": 89,
+                "maxCombo": 431,
+                "version": "Hikan's Insane"
+            },
+            "title": "Hoohah (VIP Edit)",
+            "userRank": {
+                "accuracy": 0.9851301115241635,
+                "counts": {
+                    "geki": 58,
+                    "katu": 6,
+                    "miss": 0,
+                    "x50": 0,
+                    "x100": 6,
+                    "x300": 263
+                },
+                "createdAt": "2021-08-12T17:27:10+00:00",
+                "id": 3817336700,
+                "maxCombo": 429,
+                "mods": [],
+                "perfect": false,
+                "pp": 93.4893,
+                "rank": "S",
+                "score": 2836874
+            }
+        },
+        {
+            "artist": "Akira Complex",
+            "audioPreviewUrl": "//b.ppy.sh/preview/1157351.mp3",
+            "creator": "FreeSongs",
+            "creatorId": 2116792,
+            "customTags": [
+                "fun",
+                "good-song",
+                "banger"
+            ],
+            "id": 2423711,
+            "imageUrl": "https://assets.ppy.sh/beatmaps/1157351/covers/card@2x.jpg?1622187626",
+            "mode": "osu",
+            "osuTags": [
+                "lowiro",
+                "hikari",
+                "zero",
+                "luminous",
+                "sky",
+                "future",
+                "synth",
+                "cierra",
+                "electronic",
+                "instrumental"
+            ],
+            "rankedStatus": "ranked",
+            "setId": 1157351,
+            "stats": {
+                "accuracy": 6,
+                "ar": 8,
+                "bpm": 156,
+                "cs": 4,
+                "difficultyRating": 3.44,
+                "drain": 5,
+                "lengthInSeconds": 137,
+                "maxCombo": 545,
+                "version": "Present"
+            },
+            "title": "Ether Strike",
+            "userRank": {
+                "accuracy": 0.965034965034965,
+                "counts": {
+                    "geki": 81,
+                    "katu": 12,
+                    "miss": 0,
+                    "x50": 0,
+                    "x100": 15,
+                    "x300": 271
+                },
+                "createdAt": "2021-07-10T22:25:41+00:00",
+                "id": 3763714756,
+                "maxCombo": 545,
+                "mods": [
+                    "HD"
+                ],
+                "perfect": true,
+                "pp": 43.8813,
+                "rank": "SH",
+                "score": 3966971
+            }
+        },
+        {
+            "artist": "Rameses B",
+            "audioPreviewUrl": "//b.ppy.sh/preview/1390484.mp3",
+            "creator": "Dayno",
+            "creatorId": 10634465,
+            "customTags": [
+                "fun",
+                "good-song",
+                "banger",
+                "chill-song"
+            ],
+            "id": 2871730,
+            "imageUrl": "https://assets.ppy.sh/beatmaps/1390484/covers/card@2x.jpg?1622207661",
+            "mode": "osu",
+            "osuTags": [
+                "dancefloor",
+                "dnb",
+                "drum",
+                "bass",
+                "d&b",
+                "d'n'b",
+                "electronic",
+                "instrumental",
+                "halftime",
+                "drumstep",
+                "monstercat",
+                "instinct"
+            ],
+            "rankedStatus": "ranked",
+            "setId": 1390484,
+            "stats": {
+                "accuracy": 6.5,
+                "ar": 7.5,
+                "bpm": 174,
+                "cs": 4,
+                "difficultyRating": 3.57,
+                "drain": 5,
+                "lengthInSeconds": 220,
+                "maxCombo": 1098,
+                "version": "Hard"
+            },
+            "title": "Samurai",
+            "userRank": {
+                "accuracy": 0.9778830963665087,
+                "counts": {
+                    "geki": 112,
+                    "katu": 15,
+                    "miss": 0,
+                    "x50": 0,
+                    "x100": 21,
+                    "x300": 612
+                },
+                "createdAt": "2021-06-02T07:17:52+00:00",
+                "id": 3696910086,
+                "maxCombo": 1095,
+                "mods": [],
+                "perfect": false,
+                "pp": 53.7572,
+                "rank": "S",
+                "score": 16474688
+            }
+        },
+        {
+            "artist": "Rameses B",
+            "audioPreviewUrl": "//b.ppy.sh/preview/1390484.mp3",
+            "creator": "Dayno",
+            "creatorId": 10634465,
+            "customTags": [
+                "fun",
+                "good-song",
+                "banger",
+                "chill-song"
+            ],
+            "id": 2871731,
+            "imageUrl": "https://assets.ppy.sh/beatmaps/1390484/covers/card@2x.jpg?1622207661",
+            "mode": "osu",
+            "osuTags": [
+                "dancefloor",
+                "dnb",
+                "drum",
+                "bass",
+                "d&b",
+                "d'n'b",
+                "electronic",
+                "instrumental",
+                "halftime",
+                "drumstep",
+                "monstercat",
+                "instinct"
+            ],
+            "rankedStatus": "ranked",
+            "setId": 1390484,
+            "stats": {
+                "accuracy": 8,
+                "ar": 9,
+                "bpm": 174,
+                "cs": 4.2,
+                "difficultyRating": 4.56,
+                "drain": 5,
+                "lengthInSeconds": 220,
+                "maxCombo": 1137,
+                "version": "Insane"
+            },
+            "title": "Samurai",
+            "userRank": {
+                "accuracy": 0.9629133154602324,
+                "counts": {
+                    "geki": 92,
+                    "katu": 25,
+                    "miss": 5,
+                    "x50": 0,
+                    "x100": 34,
+                    "x300": 707
+                },
+                "createdAt": "2021-07-02T19:35:27+00:00",
+                "id": 3750230003,
+                "maxCombo": 610,
+                "mods": [],
+                "perfect": false,
+                "pp": 60.0862,
+                "rank": "A",
+                "score": 7254664
+            }
+        },
+        {
+            "artist": "DJ Fresh",
+            "audioPreviewUrl": "//b.ppy.sh/preview/53813.mp3",
+            "creator": "galvenize",
+            "creatorId": 381444,
+            "customTags": [
+                "good-song",
+                "banger",
+                "jumpy",
+                "fun"
+            ],
+            "id": "178796",
+            "imageUrl": "https://assets.ppy.sh/beatmaps/53813/covers/card@2x.jpg?1622057183",
+            "mode": "osu",
+            "osuTags": [
+                "english",
+                "electronic",
+                "drum",
+                "bass",
+                "dnb",
+                "uk",
+                "garage",
+                "breakbeat",
+                "progressive",
+                "house",
+                "kriers",
+                "daniel",
+                "edward",
+                "stein",
+                "ce’cile",
+                "breakbeat",
+                "kaos",
+                "bbk",
+                "bbk006cd",
+                "kryptonite",
+                "gold",
+                "dust",
+                "data216ep",
+                "break",
+                "limit",
+                "peter",
+                "almosdi"
+            ],
+            "rankedStatus": "loved",
+            "setId": 53813,
+            "stats": {
+                "accuracy": 6,
+                "ar": 8,
+                "bpm": 175,
+                "cs": 4,
+                "difficultyRating": 3.87,
+                "drain": 6,
+                "lengthInSeconds": 264,
+                "maxCombo": 1320,
+                "version": "galv x kriers"
+            },
+            "title": "Gold Dust (Sonic Entropy Remix)",
+            "userRank": {
+                "accuracy": 0.9976553341148886,
+                "counts": {
+                    "geki": 155,
+                    "katu": 3,
+                    "miss": 0,
+                    "x50": 0,
+                    "x100": 3,
+                    "x300": 850
+                },
+                "createdAt": "2021-05-17T08:23:21+00:00",
+                "id": 3665753388,
+                "maxCombo": 827,
+                "mods": [],
+                "perfect": false,
+                "pp": null,
+                "rank": "S",
+                "score": 14502452
+            }
+        },
+        {
+            "artist": "Feint",
+            "audioPreviewUrl": "//b.ppy.sh/preview/324369.mp3",
+            "creator": "Strategas",
+            "creatorId": 2971837,
+            "customTags": [
+                "good-song",
+                "banger",
+                "fun"
+            ],
+            "id": "834763",
+            "imageUrl": "https://assets.ppy.sh/beatmaps/324369/covers/card@2x.jpg?1622087637",
+            "mode": "osu",
+            "osuTags": [
+                "dnb",
+                "drum",
+                "bass",
+                "liquicity",
+                "dahpla",
+                "lucasa4",
+                "aiceo",
+                "happyrocket88",
+                "lumael",
+                "come[back]home"
+            ],
+            "rankedStatus": "ranked",
+            "setId": 324369,
+            "stats": {
+                "accuracy": 7,
+                "ar": 8,
+                "bpm": 175,
+                "cs": 4,
+                "difficultyRating": 4.14,
+                "drain": 6,
+                "lengthInSeconds": 87,
+                "maxCombo": 517,
+                "version": "CBH's Light Insane"
+            },
+            "title": "Face Down",
+            "userRank": {
+                "accuracy": 0.9305555555555556,
+                "counts": {
+                    "geki": 53,
+                    "katu": 18,
+                    "miss": 1,
+                    "x50": 1,
+                    "x100": 36,
+                    "x300": 334
+                },
+                "createdAt": "2021-06-13T18:17:48+00:00",
+                "id": 3717891080,
+                "maxCombo": 329,
+                "mods": [],
+                "perfect": false,
+                "pp": 45.6095,
+                "rank": "B",
+                "score": 2135836
+            }
+        },
+        {
+            "artist": "かめりあ",
+            "audioPreviewUrl": "//b.ppy.sh/preview/1021338.mp3",
+            "creator": "Mir",
+            "creatorId": 8688812,
+            "customTags": [
+                "good-song",
+                "banger",
+                "difficult-end-slider-break",
+                "fun"
+            ],
+            "id": "2861740",
+            "imageUrl": "https://assets.ppy.sh/beatmaps/1021338/covers/card@2x.jpg?1622168226",
+            "mode": "osu",
+            "osuTags": [
+                "c96",
+                "comiket",
+                "blackmagik",
+                "blazing",
+                "trap",
+                "hardstyle",
+                "edm",
+                "dubstep",
+                "cametek",
+                "kamelcamellia",
+                "かめるかめりあ",
+                "ctcd-019",
+                "bleed",
+                "blood",
+                "beast",
+                "akeruyri",
+                "kujinn",
+                "reform",
+                "electronic",
+                "instrumental"
+            ],
+            "rankedStatus": "ranked",
+            "setId": 1021338,
+            "stats": {
+                "accuracy": 6,
+                "ar": 8.2,
+                "bpm": 165,
+                "cs": 4,
+                "difficultyRating": 3.68,
+                "drain": 4,
+                "lengthInSeconds": 255,
+                "maxCombo": 1257,
+                "version": "Collab Hard"
+            },
+            "title": "[BLEED BLOOD]",
+            "userRank": {
+                "accuracy": 0.974025974025974,
+                "counts": {
+                    "geki": 249,
+                    "katu": 19,
+                    "miss": 0,
+                    "x50": 0,
+                    "x100": 27,
+                    "x300": 666
+                },
+                "createdAt": "2021-08-19T18:46:22+00:00",
+                "id": 3828070343,
+                "maxCombo": 1254,
+                "mods": [],
+                "perfect": false,
+                "pp": 52.4775,
+                "rank": "S",
+                "score": 20619808
+            }
+        },
+        {
+            "artist": "ДЕТИ RAVE",
+            "audioPreviewUrl": "//b.ppy.sh/preview/1193504.mp3",
+            "creator": "mrforse",
+            "creatorId": 11642599,
+            "customTags": [
+                "good-song",
+                "banger",
+                "fun"
+            ],
+            "id": "2626552",
+            "imageUrl": "https://assets.ppy.sh/beatmaps/1193504/covers/card@2x.jpg?1607184122",
+            "mode": "osu",
+            "osuTags": [
+                "russian",
+                "techno",
+                "punk",
+                "group",
+                "deti",
+                "rave",
+                "kievskom",
+                "dinamo",
+                "ДЕТИ",
+                "РЕЙВ",
+                "КИЕВСКОМ",
+                "ДИНАМО",
+                "collab",
+                "mrforse",
+                "parad0xa",
+                "vivaney"
+            ],
+            "rankedStatus": "graveyard",
+            "setId": 1193504,
+            "stats": {
+                "accuracy": 6,
+                "ar": 7.5,
+                "bpm": 174,
+                "cs": 3.4,
+                "difficultyRating": 3.87,
+                "drain": 4.6,
+                "lengthInSeconds": 169,
+                "maxCombo": 679,
+                "version": "Hard"
+            },
+            "title": "NA KIEVSKOM DINAMO"
+        },
+        {
+            "artist": "Pegboard Nerds",
+            "audioPreviewUrl": "//b.ppy.sh/preview/301138.mp3",
+            "creator": "Marmowka",
+            "creatorId": 2907237,
+            "customTags": [
+                "good-song",
+                "banger",
+                "fun"
+            ],
+            "id": "675330",
+            "imageUrl": "https://assets.ppy.sh/beatmaps/301138/covers/card@2x.jpg?1622084857",
+            "mode": "osu",
+            "osuTags": [
+                "monstercat",
+                "drumstep",
+                "edm",
+                "dubstep",
+                "halfstep",
+                "cut",
+                "short",
+                "collab",
+                "version",
+                "shadren",
+                "zlodeuka-",
+                "nerdnation",
+                "agent"
+            ],
+            "rankedStatus": "ranked",
+            "setId": 301138,
+            "stats": {
+                "accuracy": 8,
+                "ar": 9,
+                "bpm": 87,
+                "cs": 4.2,
+                "difficultyRating": 4.56,
+                "drain": 7,
+                "lengthInSeconds": 111,
+                "maxCombo": 565,
+                "version": "Insane"
+            },
+            "title": "Try This",
+            "userRank": {
+                "accuracy": 0.9900199600798403,
+                "counts": {
+                    "geki": 53,
+                    "katu": 4,
+                    "miss": 0,
+                    "x50": 0,
+                    "x100": 5,
+                    "x300": 329
+                },
+                "createdAt": "2021-07-05T18:12:32+00:00",
+                "id": 3754989675,
+                "maxCombo": 565,
+                "mods": [],
+                "perfect": true,
+                "pp": 119.397,
+                "rank": "S",
+                "score": 5988250
+            }
+        },
+        {
+            "artist": "Pegboard Nerds",
+            "audioPreviewUrl": "//b.ppy.sh/preview/301138.mp3",
+            "creator": "Marmowka",
+            "creatorId": 2907237,
+            "customTags": [
+                "good-song",
+                "banger",
+                "fun"
+            ],
+            "id": "743972",
+            "imageUrl": "https://assets.ppy.sh/beatmaps/301138/covers/card@2x.jpg?1622084857",
+            "mode": "osu",
+            "osuTags": [
+                "monstercat",
+                "drumstep",
+                "edm",
+                "dubstep",
+                "halfstep",
+                "cut",
+                "short",
+                "collab",
+                "version",
+                "shadren",
+                "zlodeuka-",
+                "nerdnation",
+                "agent"
+            ],
+            "rankedStatus": "ranked",
+            "setId": 301138,
+            "stats": {
+                "accuracy": 6,
+                "ar": 7.8,
+                "bpm": 87,
+                "cs": 4,
+                "difficultyRating": 3.6,
+                "drain": 5.5,
+                "lengthInSeconds": 108,
+                "maxCombo": 457,
+                "version": "Collab Hard"
+            },
+            "title": "Try This",
+            "userRank": {
+                "accuracy": 0.9974842767295597,
+                "counts": {
+                    "geki": 34,
+                    "katu": 1,
+                    "miss": 0,
+                    "x50": 0,
+                    "x100": 1,
+                    "x300": 264
+                },
+                "createdAt": "2021-05-19T20:17:18+00:00",
+                "id": 3670812748,
+                "maxCombo": 457,
+                "mods": [],
+                "perfect": true,
+                "pp": 58.2628,
+                "rank": "S",
+                "score": 3158126
+            }
+        },
+        {
+            "artist": "Flo Rida",
+            "audioPreviewUrl": "//b.ppy.sh/preview/283731.mp3",
+            "creator": "ohad1881",
+            "creatorId": 3656068,
+            "customTags": [
+                "good-song",
+                "fun"
+            ],
+            "id": "682966",
+            "imageUrl": "https://assets.ppy.sh/beatmaps/283731/covers/card@2x.jpg?1622082823",
+            "mode": "osu",
+            "osuTags": [
+                "nightcore",
+                "wild",
+                "ones",
+                "a",
+                "mystery",
+                "to",
+                "you",
+                "-nya-",
+                "rap"
+            ],
+            "rankedStatus": "ranked",
+            "setId": 283731,
+            "stats": {
+                "accuracy": 7,
+                "ar": 8.5,
+                "bpm": 150.338,
+                "cs": 4,
+                "difficultyRating": 4.17,
+                "drain": 6,
+                "lengthInSeconds": 186,
+                "maxCombo": 957,
+                "version": "A Mystery's Insane"
+            },
+            "title": "Run ft. RedFoo of LMFAO (Speed Up Ver.)",
+            "userRank": {
+                "accuracy": 0.9638676844783715,
+                "counts": {
+                    "geki": 80,
+                    "katu": 27,
+                    "miss": 1,
+                    "x50": 0,
+                    "x100": 34,
+                    "x300": 620
+                },
+                "createdAt": "2021-06-26T06:32:17+00:00",
+                "id": 3739393899,
+                "maxCombo": 946,
+                "mods": [],
+                "perfect": false,
+                "pp": 75.4104,
+                "rank": "A",
+                "score": 14140390
+            }
+        },
+        {
+            "artist": "The Weeknd",
+            "audioPreviewUrl": "//b.ppy.sh/preview/1124502.mp3",
+            "creator": "Frostmourne",
+            "creatorId": 199669,
+            "customTags": [
+                "good-song",
+                "banger",
+                "fun",
+                "chill"
+            ],
+            "id": "2351162",
+            "imageUrl": "https://assets.ppy.sh/beatmaps/1124502/covers/card@2x.jpg?1622183770",
+            "mode": "osu",
+            "osuTags": [
+                "frostxe",
+                "english",
+                "pop",
+                "electropop",
+                "synthwave"
+            ],
+            "rankedStatus": "ranked",
+            "setId": 1124502,
+            "stats": {
+                "accuracy": 8,
+                "ar": 9,
+                "bpm": 171,
+                "cs": 4,
+                "difficultyRating": 4.45,
+                "drain": 7,
+                "lengthInSeconds": 194,
+                "maxCombo": 859,
+                "version": "Insane"
+            },
+            "title": "Blinding Lights",
+            "userRank": {
+                "accuracy": 0.9321739130434783,
+                "counts": {
+                    "geki": 84,
+                    "katu": 30,
+                    "miss": 7,
+                    "x50": 0,
+                    "x100": 48,
+                    "x300": 520
+                },
+                "createdAt": "2021-03-17T00:15:51+00:00",
+                "id": 3537004321,
+                "maxCombo": 534,
+                "mods": [],
+                "perfect": false,
+                "pp": 43.5372,
+                "rank": "A",
+                "score": 5869980
+            }
+        },
+        {
+            "artist": "TheFatRat, Slaydit, Anjulie",
+            "audioPreviewUrl": "//b.ppy.sh/preview/1225170.mp3",
+            "creator": "OverXon",
+            "creatorId": 13088868,
+            "customTags": [
+                "good-song",
+                "banger",
+                "fun"
+            ],
+            "id": "2548107",
+            "imageUrl": "https://assets.ppy.sh/beatmaps/1225170/covers/card@2x.jpg?1620558018",
+            "mode": "osu",
+            "osuTags": [
+                "stronger",
+                "thefatrat",
+                "slaydit",
+                "anjulie",
+                "edm",
+                "ncs",
+                "bass",
+                "electro",
+                "instrumental",
+                "electric",
+                "wubs",
+                "dubstep",
+                "monstercat"
+            ],
+            "rankedStatus": "graveyard",
+            "setId": 1225170,
+            "stats": {
+                "accuracy": 5,
+                "ar": 9,
+                "bpm": 160,
+                "cs": 3.2,
+                "difficultyRating": 4.02,
+                "drain": 5,
+                "lengthInSeconds": 191,
+                "maxCombo": 880,
+                "version": "Light Insane"
+            },
+            "title": "Stronger"
+        },
+        {
+            "artist": "Krewella",
+            "audioPreviewUrl": "//b.ppy.sh/preview/446774.mp3",
+            "creator": "PantyDev",
+            "creatorId": 5420543,
+            "customTags": [
+                "good-song",
+                "banger",
+                "fun"
+            ],
+            "id": "959407",
+            "imageUrl": "https://assets.ppy.sh/beatmaps/446774/covers/card@2x.jpg?1622102851",
+            "mode": "osu",
+            "osuTags": [
+                "electro",
+                "d'n'b",
+                "krewella",
+                "say",
+                "goodbye",
+                "dubstep",
+                "pantydev"
+            ],
+            "rankedStatus": "loved",
+            "setId": 446774,
+            "stats": {
+                "accuracy": 8,
+                "ar": 8.9,
+                "bpm": 180,
+                "cs": 3.8,
+                "difficultyRating": 3.67,
+                "drain": 6,
+                "lengthInSeconds": 224,
+                "maxCombo": 980,
+                "version": "Hard"
+            },
+            "title": "Say Goodbye",
+            "userRank": {
+                "accuracy": 0.9820123664980326,
+                "counts": {
+                    "geki": 127,
+                    "katu": 16,
+                    "miss": 0,
+                    "x50": 0,
+                    "x100": 16,
+                    "x300": 577
+                },
+                "createdAt": "2021-04-30T17:04:55+00:00",
+                "id": 3631910329,
+                "maxCombo": 979,
+                "mods": [],
+                "perfect": false,
+                "pp": null,
+                "rank": "S",
+                "score": 13846760
+            }
+        },
+        {
+            "artist": "HOME",
+            "audioPreviewUrl": "//b.ppy.sh/preview/1026468.mp3",
+            "creator": "Renumi",
+            "creatorId": 1721120,
+            "customTags": [
+                "good-song",
+                "banger",
+                "fun",
+                "chill"
+            ],
+            "id": "2279417",
+            "imageUrl": "https://assets.ppy.sh/beatmaps/1026468/covers/card@2x.jpg?1609846215",
+            "mode": "osu",
+            "osuTags": [
+                "synthwave",
+                "synthpop",
+                "chillwave",
+                "vaporwave"
+            ],
+            "rankedStatus": "graveyard",
+            "setId": 1026468,
+            "stats": {
+                "accuracy": 6,
+                "ar": 8.9,
+                "bpm": 85,
+                "cs": 4.4,
+                "difficultyRating": 3.58,
+                "drain": 5,
+                "lengthInSeconds": 203,
+                "maxCombo": 771,
+                "version": "Star Map"
+            },
+            "title": "Resonance"
+        },
+        {
+            "artist": "DJ Fresh",
+            "audioPreviewUrl": "//b.ppy.sh/preview/935111.mp3",
+            "creator": "Sotarks",
+            "creatorId": 4452992,
+            "customTags": [
+                "good-song",
+                "banger",
+                "fun"
+            ],
+            "id": "1963417",
+            "imageUrl": "https://assets.ppy.sh/beatmaps/935111/covers/card@2x.jpg?1622157513",
+            "mode": "osu",
+            "osuTags": [
+                "akitoshi",
+                "corinn",
+                "-laura-",
+                "nikakis",
+                "snownino_",
+                "reform",
+                "kujinn",
+                "onlybiscuit",
+                "smokelind",
+                "miraclee",
+                "kroytz",
+                "english",
+                "vocals",
+                "brotarks"
+            ],
+            "rankedStatus": "ranked",
+            "setId": 935111,
+            "stats": {
+                "accuracy": 8,
+                "ar": 9,
+                "bpm": 177,
+                "cs": 4,
+                "difficultyRating": 4.2,
+                "drain": 5,
+                "lengthInSeconds": 88,
+                "maxCombo": 455,
+                "version": "NiNo's Insane"
+            },
+            "title": "Gold Dust",
+            "userRank": {
+                "accuracy": 0.9603691639522258,
+                "counts": {
+                    "geki": 58,
+                    "katu": 8,
+                    "miss": 0,
+                    "x50": 1,
+                    "x100": 17,
+                    "x300": 289
+                },
+                "createdAt": "2021-05-14T21:12:59+00:00",
+                "id": 3660862474,
+                "maxCombo": 455,
+                "mods": [],
+                "perfect": true,
+                "pp": 73.8604,
+                "rank": "S",
+                "score": 3436226
+            }
+        },
+        {
+            "artist": "Fred V & Grafix",
+            "audioPreviewUrl": "//b.ppy.sh/preview/1272355.mp3",
+            "creator": "Dayno",
+            "creatorId": 10634465,
+            "customTags": [
+                "good-song",
+                "banger",
+                "fun",
+                "chill"
+            ],
+            "id": "2643866",
+            "imageUrl": "https://assets.ppy.sh/beatmaps/1272355/covers/card@2x.jpg?1622198963",
+            "mode": "osu",
+            "osuTags": [
+                "mrpotato",
+                "electronic",
+                "liquid",
+                "funk",
+                "dnb",
+                "drum",
+                "bass",
+                "english",
+                "chelsea",
+                "watts",
+                "female",
+                "vocalist",
+                "vocals",
+                "oxygen",
+                "hospital",
+                "collab",
+                "collaboration",
+                "ultra",
+                "violet"
+            ],
+            "rankedStatus": "ranked",
+            "setId": 1272355,
+            "stats": {
+                "accuracy": 7,
+                "ar": 8,
+                "bpm": 174,
+                "cs": 3.5,
+                "difficultyRating": 3.87,
+                "drain": 5,
+                "lengthInSeconds": 221,
+                "maxCombo": 1111,
+                "version": "Hard"
+            },
+            "title": "Ultraviolet",
+            "userRank": {
+                "accuracy": 0.9911858974358975,
+                "counts": {
+                    "geki": 149,
+                    "katu": 5,
+                    "miss": 0,
+                    "x50": 1,
+                    "x100": 7,
+                    "x300": 616
+                },
+                "createdAt": "2021-07-20T18:28:11+00:00",
+                "id": 3780403235,
+                "maxCombo": 1111,
+                "mods": [],
+                "perfect": true,
+                "pp": 77.7042,
+                "rank": "S",
+                "score": 16422042
+            }
+        },
+        {
+            "artist": "cYsmix",
+            "audioPreviewUrl": "//b.ppy.sh/preview/486535.mp3",
+            "creator": "Okorin",
+            "creatorId": 1623405,
+            "customTags": [
+                "good-song",
+                "banger",
+                "fun"
+            ],
+            "id": "1139966",
+            "imageUrl": "https://assets.ppy.sh/beatmaps/486535/covers/card@2x.jpg?1622106884",
+            "mode": "osu",
+            "osuTags": [
+                "okoratu",
+                "beethoven",
+                "ludwig",
+                "van",
+                "mapping",
+                "electro",
+                "trance",
+                "classical",
+                "mwr"
+            ],
+            "rankedStatus": "ranked",
+            "setId": 486535,
+            "stats": {
+                "accuracy": 6,
+                "ar": 8,
+                "bpm": 128,
+                "cs": 4,
+                "difficultyRating": 3.68,
+                "drain": 5,
+                "lengthInSeconds": 189,
+                "maxCombo": 886,
+                "version": "Hard"
+            },
+            "title": "Moonlight Sonata",
+            "userRank": {
+                "accuracy": 0.9866536458333334,
+                "counts": {
+                    "geki": 101,
+                    "katu": 7,
+                    "miss": 0,
+                    "x50": 1,
+                    "x100": 9,
+                    "x300": 502
+                },
+                "createdAt": "2021-05-25T05:05:38+00:00",
+                "id": 3681558921,
+                "maxCombo": 883,
+                "mods": [],
+                "perfect": false,
+                "pp": 55.4459,
+                "rank": "S",
+                "score": 11091678
+            }
+        },
+        {
+            "artist": "League of Legends",
+            "audioPreviewUrl": "//b.ppy.sh/preview/785504.mp3",
+            "creator": "Pachiru",
+            "creatorId": 2850983,
+            "customTags": [
+                "good-song",
+                "banger",
+                "fun"
+            ],
+            "id": "1649031",
+            "imageUrl": "https://assets.ppy.sh/beatmaps/785504/covers/card@2x.jpg?1622140320",
+            "mode": "osu",
+            "osuTags": [
+                "electronic",
+                "video",
+                "game",
+                "joytime",
+                "warsongs"
+            ],
+            "rankedStatus": "ranked",
+            "setId": 785504,
+            "stats": {
+                "accuracy": 6,
+                "ar": 9,
+                "bpm": 142,
+                "cs": 4,
+                "difficultyRating": 4.02,
+                "drain": 6,
+                "lengthInSeconds": 109,
+                "maxCombo": 526,
+                "version": "Insane"
+            },
+            "title": "Flash Funk (Marshmello Remix)",
+            "userRank": {
+                "accuracy": 0.9829178208679594,
+                "counts": {
+                    "geki": 76,
+                    "katu": 4,
+                    "miss": 0,
+                    "x50": 1,
+                    "x100": 8,
+                    "x300": 352
+                },
+                "createdAt": "2021-07-13T23:31:43+00:00",
+                "id": 3768817546,
+                "maxCombo": 526,
+                "mods": [
+                    "SD"
+                ],
+                "perfect": true,
+                "pp": 67.5896,
+                "rank": "S",
+                "score": 4395368
+            }
+        },
+        {
+            "artist": "tomatoism",
+            "audioPreviewUrl": "//b.ppy.sh/preview/1240394.mp3",
+            "creator": "Seismic",
+            "creatorId": 15008652,
+            "customTags": [
+                "good-song",
+                "banger",
+                "fun"
+            ],
+            "id": "2578804",
+            "imageUrl": "https://assets.ppy.sh/beatmaps/1240394/covers/card@2x.jpg?1617926464",
+            "mode": "osu",
+            "osuTags": [
+                "someone",
+                "special",
+                "pop",
+                "future",
+                "funk",
+                "japanese",
+                "dochakuso",
+                "electronic"
+            ],
+            "rankedStatus": "graveyard",
+            "setId": 1240394,
+            "stats": {
+                "accuracy": 7,
+                "ar": 8,
+                "bpm": 145.35,
+                "cs": 3.7,
+                "difficultyRating": 3.43,
+                "drain": 5,
+                "lengthInSeconds": 207,
+                "maxCombo": 848,
+                "version": "Hard"
+            },
+            "title": "S o m e o n e  S p e c i a l"
+        },
+        {
+            "artist": "Will.I.Am",
+            "audioPreviewUrl": "//b.ppy.sh/preview/935967.mp3",
+            "creator": "DonZie",
+            "creatorId": 10679881,
+            "customTags": [
+                "good-song",
+                "banger",
+                "fun",
+                "jumpy"
+            ],
+            "id": "1955290",
+            "imageUrl": "https://assets.ppy.sh/beatmaps/935967/covers/card@2x.jpg?1552087174",
+            "mode": "osu",
+            "osuTags": [
+                "chunky",
+                "big",
+                "phat"
+            ],
+            "rankedStatus": "graveyard",
+            "setId": 935967,
+            "stats": {
+                "accuracy": 6,
+                "ar": 8.5,
+                "bpm": 120,
+                "cs": 2,
+                "difficultyRating": 4.05,
+                "drain": 5.5,
+                "lengthInSeconds": 185,
+                "maxCombo": 732,
+                "version": "Chonky"
+            },
+            "title": "Big And Chunky"
+        },
+        {
+            "artist": "Joji",
+            "audioPreviewUrl": "//b.ppy.sh/preview/817776.mp3",
+            "creator": "Mortem",
+            "creatorId": 2959862,
+            "customTags": [
+                "good-song",
+                "banger",
+                "fun",
+                "chill"
+            ],
+            "id": "1861763",
+            "imageUrl": "https://assets.ppy.sh/beatmaps/817776/covers/card@2x.jpg?1622144087",
+            "mode": "osu",
+            "osuTags": [
+                "lofi",
+                "88rising",
+                "empire",
+                "filthy",
+                "frank",
+                "george",
+                "miller",
+                "japan",
+                "gordon123",
+                "kittyadventure",
+                "gokugohan12468",
+                "smau5",
+                "ballads"
+            ],
+            "rankedStatus": "ranked",
+            "setId": 817776,
+            "stats": {
+                "accuracy": 8,
+                "ar": 8.5,
+                "bpm": 84.5,
+                "cs": 3.5,
+                "difficultyRating": 4.24,
+                "drain": 5,
+                "lengthInSeconds": 140,
+                "maxCombo": 566,
+                "version": "KITTYADVENTURE'S TRAGIC LOVE STORY"
+            },
+            "title": "YEAH RIGHT",
+            "userRank": {
+                "accuracy": 0.9713261648745519,
+                "counts": {
+                    "geki": 81,
+                    "katu": 13,
+                    "miss": 0,
+                    "x50": 0,
+                    "x100": 16,
+                    "x300": 356
+                },
+                "createdAt": "2021-04-10T11:51:20+00:00",
+                "id": 3589250825,
+                "maxCombo": 565,
+                "mods": [],
+                "perfect": false,
+                "pp": 79.9522,
+                "rank": "S",
+                "score": 5121190
+            }
+        },
+        {
+            "artist": "Marina",
+            "audioPreviewUrl": "//b.ppy.sh/preview/1109365.mp3",
+            "creator": "devilzlight",
+            "creatorId": 12692969,
+            "customTags": [
+                "good-song",
+                "banger",
+                "fun"
+            ],
+            "id": "2318259",
+            "imageUrl": "https://assets.ppy.sh/beatmaps/1109365/covers/card@2x.jpg?1629248911",
+            "mode": "osu",
+            "osuTags": [
+                "immortal",
+                "syberian",
+                "marina"
+            ],
+            "rankedStatus": "pending",
+            "setId": 1109365,
+            "stats": {
+                "accuracy": 7,
+                "ar": 9.5,
+                "bpm": 174,
+                "cs": 3,
+                "difficultyRating": 4.69,
+                "drain": 6,
+                "lengthInSeconds": 216,
+                "maxCombo": 1050,
+                "version": "Insane"
+            },
+            "title": "Immortal (MewOne!, Syberian Beast Remix)"
+        },
+        {
+            "artist": "EnV",
+            "audioPreviewUrl": "//b.ppy.sh/preview/1182841.mp3",
+            "creator": "RyuuST",
+            "creatorId": 8617347,
+            "customTags": [
+                "good-song",
+                "banger",
+                "fun"
+            ],
+            "id": "2466306",
+            "imageUrl": "https://assets.ppy.sh/beatmaps/1182841/covers/card@2x.jpg?1593896425",
+            "mode": "osu",
+            "osuTags": [],
+            "rankedStatus": "graveyard",
+            "setId": 1182841,
+            "stats": {
+                "accuracy": 7,
+                "ar": 8,
+                "bpm": 128,
+                "cs": 4,
+                "difficultyRating": 3.26,
+                "drain": 5.8,
+                "lengthInSeconds": 240,
+                "maxCombo": 997,
+                "version": "Hard Anubis"
+            },
+            "title": "Anubis"
+        },
+        {
+            "artist": "EnV",
+            "audioPreviewUrl": "//b.ppy.sh/preview/1182841.mp3",
+            "creator": "RyuuST",
+            "creatorId": 8617347,
+            "customTags": [
+                "good-song",
+                "banger",
+                "fun"
+            ],
+            "id": "2466012",
+            "imageUrl": "https://assets.ppy.sh/beatmaps/1182841/covers/card@2x.jpg?1593896425",
+            "mode": "osu",
+            "osuTags": [],
+            "rankedStatus": "graveyard",
+            "setId": 1182841,
+            "stats": {
+                "accuracy": 7,
+                "ar": 9.3,
+                "bpm": 128,
+                "cs": 4.2,
+                "difficultyRating": 4.06,
+                "drain": 6.5,
+                "lengthInSeconds": 240,
+                "maxCombo": 996,
+                "version": "Insane Anubis"
+            },
+            "title": "Anubis"
+        },
+        {
+            "artist": "TIN",
+            "audioPreviewUrl": "//b.ppy.sh/preview/941601.mp3",
+            "creator": "NekoStar",
+            "creatorId": 8314063,
+            "customTags": [
+                "good-song",
+                "banger",
+                "fun"
+            ],
+            "id": "1966264",
+            "imageUrl": "https://assets.ppy.sh/beatmaps/941601/covers/card@2x.jpg?1552821067",
+            "mode": "osu",
+            "osuTags": [
+                "chill",
+                "trap"
+            ],
+            "rankedStatus": "graveyard",
+            "setId": 941601,
+            "stats": {
+                "accuracy": 7,
+                "ar": 9,
+                "bpm": 150,
+                "cs": 4,
+                "difficultyRating": 3.65,
+                "drain": 5.5,
+                "lengthInSeconds": 238,
+                "maxCombo": 1093,
+                "version": "Hyper"
+            },
+            "title": "Ticking"
+        },
+        {
+            "artist": "LeaF",
+            "audioPreviewUrl": "//b.ppy.sh/preview/1070820.mp3",
+            "creator": "Plaudible",
+            "creatorId": 7149815,
+            "customTags": [
+                "good-song",
+                "banger",
+                "fun"
+            ],
+            "id": "2241478",
+            "imageUrl": "https://assets.ppy.sh/beatmaps/1070820/covers/card@2x.jpg?1622174661",
+            "mode": "osu",
+            "osuTags": [
+                "lokidoki",
+                "glitch",
+                "hardcore",
+                "horror",
+                "electronic",
+                "instrumental",
+                "除草剤",
+                "joso",
+                "zai",
+                "g2r2018",
+                "sdvx",
+                "bms"
+            ],
+            "rankedStatus": "ranked",
+            "setId": 1070820,
+            "stats": {
+                "accuracy": 5,
+                "ar": 8,
+                "bpm": 140,
+                "cs": 3.5,
+                "difficultyRating": 3.1,
+                "drain": 4,
+                "lengthInSeconds": 143,
+                "maxCombo": 629,
+                "version": "ADVANCED"
+            },
+            "title": "MARENOL",
+            "userRank": {
+                "accuracy": 0.9959349593495935,
+                "counts": {
+                    "geki": 93,
+                    "katu": 1,
+                    "miss": 0,
+                    "x50": 0,
+                    "x100": 2,
+                    "x300": 326
+                },
+                "createdAt": "2021-05-31T16:51:00+00:00",
+                "id": 3693965199,
+                "maxCombo": 629,
+                "mods": [],
+                "perfect": true,
+                "pp": 38.0916,
+                "rank": "S",
+                "score": 5340464
+            }
+        }
+    ],
+    "osuUserId": 18508852,
+    "osuUserName": "niklas616",
+    "title": "Favorite Beatmaps of niklas616"
+}
