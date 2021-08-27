@@ -1,13 +1,14 @@
-import osuApiV2 from "osu-api-v2"
+import osuApiV2, {
+    Beatmapset,
+    GameMode,
+    OAuthAccessToken,
+    RankedStatus,
+} from "osu-api-v2"
 import { promises as fsp } from "fs"
 import * as path from "path"
 
-import type { OAuthAccessToken } from "osu-api-v2/lib/types/oauth_access_token"
-
 import { readOauthCredentials } from "./read_oauth_credentials"
 import { readFavoriteBeatmaps } from "./read_favorite_beatmaps"
-import { GameMode } from "osu-api-v2/lib/types/game_mode"
-import { Beatmapset, RankedStatus } from "osu-api-v2/lib/types/beatmap"
 
 export interface FavoriteBeatmapInformationStats {
     accuracy: number
